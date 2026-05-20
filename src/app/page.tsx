@@ -63,7 +63,7 @@ const MAX_PENDING_PREVIEW = 3;
 export default function GuiaDeIntervencionInteractiva() {
   const [mostrarEscudoAcceso, setMostrarEscudoAcceso] = useState(true);
   const [pruebaSeleccionada, setPruebaSeleccionada] = useState<string | null>(null);
-  const [segundos, setSegundos] = useState(2700);
+  const [segundos, setSegundos] = useState(1800);
   const [timerActivo, setTimerActivo] = useState(false);
   const [tugCorriendo, setTugCorriendo] = useState(false);
   const [tugTiempoMs, setTugTiempoMs] = useState(0);
@@ -1006,7 +1006,7 @@ export default function GuiaDeIntervencionInteractiva() {
                 <button onClick={() => setTimerActivo(!timerActivo)} className="p-2 bg-red-800 rounded-full">
                   {timerActivo ? <Pause size={18} /> : <Play size={18} />}
                 </button>
-                <button onClick={() => { setSegundos(2700); setTimerActivo(false); }} className="p-2 bg-slate-700 rounded-full">
+                <button onClick={() => { setSegundos(1800); setTimerActivo(false); }} className="p-2 bg-slate-700 rounded-full">
                   <RotateCcw size={18} />
                 </button>
               </div>
