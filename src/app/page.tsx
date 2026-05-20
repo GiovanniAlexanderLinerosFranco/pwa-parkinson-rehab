@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { supabase } from '@/lib/supabase';
+import Link from 'next/link';
 import { 
   Activity, ShieldCheck, ClipboardCheck, 
   Layers, X, GraduationCap, Play, Pause, RotateCcw, Save, Download
@@ -675,13 +676,12 @@ export default function GuiaDeIntervencionInteractiva() {
         
         {/* Recurso descargable (Solicitud de la profesora) */}
         <div className="flex justify-end">
-          <a 
-            href="/Ejemplos_Intervencion_Clinica.pdf" 
-            download 
+          <Link
+            href="/ejemplos-sesion-clinica"
             className="flex items-center gap-2 px-5 py-3 bg-red-800 text-white rounded-xl font-bold text-sm hover:bg-red-900 transition-colors shadow-sm"
           >
-            <Download size={18} /> Descargar Ejemplos de Sesión Clínica
-          </a>
+            <Download size={18} /> Abrir Ejemplos de Sesión Clínica
+          </Link>
         </div>
 
         {/* 1) Perfil clínico */}
