@@ -1014,16 +1014,16 @@ export default function GuiaDeIntervencionInteractiva() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className={`p-4 rounded-2xl border ${segundos > 2400 ? 'bg-red-800 border-white' : 'bg-white/5 border-white/10 opacity-50'}`}>
+            <div className={`p-4 rounded-2xl border ${segundos > 1500 ? 'bg-red-800 border-white' : 'bg-white/5 border-white/10 opacity-50'}`}>
               <h4 className="font-bold text-xs uppercase">1. Calentamiento (5 min)</h4>
               <p className="text-[10px] text-red-100">Movilidad y respiración consciente.</p>
             </div>
-            <div className={`p-4 rounded-2xl border ${segundos <= 2400 && segundos > 600 ? 'bg-red-800 border-white' : 'bg-white/5 border-white/10 opacity-50'}`}>
-              <h4 className="font-bold text-xs uppercase">2. Intervención Digital (30 min)</h4>
+            <div className={`p-4 rounded-2xl border ${segundos <= 1500 && segundos > 300 ? 'bg-red-800 border-white' : 'bg-white/5 border-white/10 opacity-50'}`}>
+              <h4 className="font-bold text-xs uppercase">2. Intervención Digital (20 min)</h4>
               <p className="text-[10px] text-red-100">Estímulos multisensoriales.</p>
             </div>
-            <div className={`p-4 rounded-2xl border ${segundos <= 600 && segundos > 0 ? 'bg-red-800 border-white' : 'bg-white/5 border-white/10 opacity-50'}`}>
-              <h4 className="font-bold text-xs uppercase">3. Enfriamiento (10 min)</h4>
+            <div className={`p-4 rounded-2xl border ${segundos <= 300 && segundos > 0 ? 'bg-red-800 border-white' : 'bg-white/5 border-white/10 opacity-50'}`}>
+              <h4 className="font-bold text-xs uppercase">3. Enfriamiento (5 min)</h4>
               <p className="text-[10px] text-red-100">Estiramientos y feedback.</p>
             </div>
           </div>
