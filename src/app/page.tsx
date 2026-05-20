@@ -60,7 +60,7 @@ type ValoracionPendiente = {
 const OFFLINE_QUEUE_KEY = 'biogalf_valoraciones_pendientes_v1';
 const MAX_PENDING_PREVIEW = 3;
 
-export default function CartillaInteractiva() {
+export default function GuiaDeIntervencionInteractiva() {
   const [mostrarEscudoAcceso, setMostrarEscudoAcceso] = useState(true);
   const [pruebaSeleccionada, setPruebaSeleccionada] = useState<string | null>(null);
   const [segundos, setSegundos] = useState(2700);

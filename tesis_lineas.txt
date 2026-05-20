@@ -185,7 +185,7 @@
  185: | Categoría de análisis | Subcategoría | Relación con evidencia y diseño de la guía |
  186: |---|---|---|
  187: | Comprensión integral del riesgo de caídas | Evaluación funcional ampliada | Integración de TUG, BBS y FGA para lectura clínica multimodal |
- 188: | Comprensión integral del riesgo de caídas | Influencia del entorno | Registro de factores socioambientales en la cartilla |
+ 188: | Comprensión integral del riesgo de caídas | Influencia del entorno | Registro de factores socioambientales en la Guía de Intervención |
  189: | Comprensión integral del riesgo de caídas | Doble tarea cognitivo-motora | Incorporación de TUG cognitivo en la evaluación inicial |
  190: | Tecnología como estrategia terapéutica complementaria | Tecnología como complemento clínico | La guía apoya decisiones sin reemplazar juicio profesional |
  191: | Tecnología como estrategia terapéutica complementaria | Enriquecimiento ambiental | Uso de estímulos rítmicos auditivo-visuales para marcha |
@@ -250,7 +250,7 @@
  250: ## Anexo 1. Guía práctica para la prevención de caídas en pacientes con Parkinson (fase temprana)  
  251: Este anexo contiene la guía estructurada con ejercicios convencionales y digitales, organizada en pasos claros para el fisioterapeuta. Incluye recomendaciones de seguridad, tiempos de práctica y ejemplos de actividades adaptadas al contexto colombiano.  
  252: 
- 253: ## Anexo 2. Ficha técnica de la cartilla digital (PWA)  
+ 253: ## Anexo 2. Ficha técnica de la Guía de Intervención digital (PWA)  
  254: La ficha describe las características de la aplicación web progresiva:  
  255: - Plataforma: PWA accesible desde dispositivos móviles y computadores.  
  256: - Funciones: registro de pruebas clínicas, cálculo automático de riesgo, metrónomo digital.  

@@ -18,7 +18,7 @@ export default function TugPage() {
   return (
     <div className="min-h-screen bg-slate-50 p-6 md:p-12">
       <Link href="/" className="flex items-center gap-2 text-blue-600 mb-8 hover:underline">
-        <ArrowLeft size={20} /> Volver a la Cartilla
+        <ArrowLeft size={20} /> Volver a la Guía de Intervención
       </Link>
 
       <div className="max-w-4xl mx-auto bg-white rounded-[32px] p-8 shadow-sm border">
