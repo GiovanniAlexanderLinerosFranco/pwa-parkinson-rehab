@@ -1,0 +1,1299 @@
+\documentclass[12pt,a4paper,spanish,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Configuración de encabezados y márgenes
+\setlength{\headheight}{14.5pt}
+
+% Configuración de colores
+\definecolor{darkred}{HTML}{8B0000}
+\definecolor{lightred}{HTML}{FFE6E6}
+\definecolor{darkblue}{HTML}{003366}
+\definecolor{lightblue}{HTML}{E6F2FF}
+
+% Configuración de encabezados
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\textcolor{darkred}{\textbf{Manual PWA Parkinson}}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\color{darkred}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}
+
+% Comando personalizado para recuadros
+\newtcolorbox{conceptobox}{colback=lightblue,colframe=darkblue,boxrule=1.5pt,
+  left=10pt,right=10pt,top=10pt,bottom=10pt,fontupper=\small}
+
+\newtcolorbox{advertenciabox}{colback=lightred,colframe=darkred,boxrule=1.5pt,
+  left=10pt,right=10pt,top=10pt,bottom=10pt,fontupper=\small}
+
+\newtcolorbox{ejemplobox}{colback={rgb:green,1;white,4},colframe=green,boxrule=1.5pt,
+  left=10pt,right=10pt,top=10pt,bottom=10pt,fontupper=\small}
+
+\title{
+  \Huge \textbf{\textcolor{darkred}{Manual Completo de Uso}} \\[0.5cm]
+  \huge \textbf{Plataforma Web de Asistencia Clínica} \\[0.3cm]
+  \Large \textbf{Prevención de Caídas en Parkinson}
+}
+
+\author{
+  Universidad Manuela Beltrán \\[0.2cm]
+  Facultad de Ciencias de la Salud \\[0.2cm]
+  \textit{Diseño y validación de herramienta digital} \\[0.5cm]
+  \normalsize Angie Alejandra Amado Téllez
+}
+
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+
+% Portada
+\begin{titlepage}
+  \begin{center}
+    \vspace*{2cm}
+    
+    \includegraphics[width=0.3\textwidth]{} % Aquí va el logo si existe
+    
+    \vspace{1cm}
+    
+    {\Large \textbf{UNIVERSIDAD MANUELA BELTRÁN}}
+    
+    {\large Facultad de Ciencias de la Salud}
+    
+    \vspace{2cm}
+    
+    \hrule
+    
+    \vspace{1cm}
+    
+    {\Huge \textbf{\textcolor{darkred}{Manual Completo de Uso}}}
+    
+    \vspace{0.5cm}
+    
+    {\huge \textbf{Prevención de Caídas en Parkinson}}
+    
+    \vspace{0.5cm}
+    
+    {\LARGE \textbf{Plataforma Web de Asistencia Clínica}}
+    
+    \vspace{1cm}
+    
+    \hrule
+    
+    \vspace{2cm}
+    
+    {\large \textbf{Descripción:} Guía exhaustiva para profesionales de fisioterapia, neurólogos y personal sanitario sobre el uso correcto de la herramienta digital de evaluación y monitoreo de riesgo de caídas en pacientes con Parkinson.}
+    
+    \vspace{2cm}
+    
+    {\normalsize Diseño y Validación: Angie Alejandra Amado Téllez}
+    
+    \vspace{3cm}
+    
+    {\normalsize \textbf{Versión:} 1.0}
+    
+    {\normalsize \textbf{Fecha:} \today}
+    
+  \end{center}
+\end{titlepage}
+
+% Página de advertencia
+\newpage
+\section*{Advertencia Legal}
+
+\begin{advertenciabox}
+  \textbf{RESTRICCIÓN DE USO:}
+  
+  Esta plataforma es un \textbf{Asistente de Decisión Clínica} para uso exclusivo de profesionales de la fisioterapia, neurólogos y personal sanitario debidamente acreditados con tarjeta profesional vigente.
+  
+  \textbf{NO SUSTITUYE} el criterio clínico profesional. Todos los usuarios asumen responsabilidad total sobre:
+  \begin{itemize}
+    \item Integridad y confidencialidad del paciente
+    \item Cumplimiento de leyes de protección de datos (Ley 1581 de 2012 en Colombia)
+    \item Validez clínica de los resultados interpretados
+  \end{itemize}
+  
+  Uso exclusivamente en pacientes con diagnóstico confirmado de Parkinson en Estadios I-III (Escala Hoehn y Yahr).
+\end{advertenciabox}
+
+% Tabla de contenidos
+\tableofcontents
+
+\mainmatter
+
+% CAPÍTULO 1: INTRODUCCIÓN
+\chapter{Introducción General}
+
+\section{Propósito de esta Guía}
+
+Este manual ha sido diseñado para profesionales del área sanitaria que desean comprender y utilizar correctamente la Plataforma Web de Asistencia Clínica (PWA) para ``Prevención de Caídas en Parkinson''.
+
+La guía asume \textbf{sin experiencia previa} en el sistema y proporciona:
+
+\begin{enumerate}
+  \item Explicación del contexto clínico y necesidad de la herramienta
+  \item Paso a paso detallado de navegación
+  \item Descripción científica de cada prueba clínica
+  \item Interpretación correcta de resultados
+  \item Integración en protocolos de intervención fisioterapéutica
+\end{enumerate}
+
+\section{¿Por Qué Existe Esta Herramienta?}
+
+\subsection{Contexto Clínico}
+
+La enfermedad de Parkinson es un trastorno neurodegenerativo progresivo que afecta la motricidad del paciente, generando:
+
+\begin{itemize}
+  \item \textbf{Bradicinesia:} Lentitud de movimientos
+  \item \textbf{Rigidez:} Resistencia al movimiento pasivo
+  \item \textbf{Temblor:} Oscilaciones involuntarias
+  \item \textbf{Inestabilidad postural:} Pérdida de equilibrio y aumento de riesgo de caídas
+\end{itemize}
+
+Las caídas en pacientes con Parkinson representan complicaciones graves que resultan en:
+\begin{itemize}
+  \item Fracturas óseas
+  \item Hospitalización prolongada
+  \item Deterioro funcional acelerado
+  \item Muerte en casos severos
+\end{itemize}
+
+\subsection{Solución Propuesta}
+
+La PWA integra en una plataforma digital unificada:
+\begin{itemize}
+  \item Batería de pruebas clínicas validadas internacionalmente (TUG, BBS, FGA, UPDRS)
+  \item Protocolos de monitoreo de sesión optimizados (30 minutos: 5/20/5)
+  \item Estimulación rítmica sensorial (cueing) para mejora de marcha
+  \item Registro automático de datos y generación de reportes
+  \item Almacenamiento seguro en la nube (Supabase)
+\end{itemize}
+
+\section{Beneficios Clave}
+
+\begin{conceptobox}
+  \textbf{Para el Profesional:}
+  \begin{itemize}
+    \item Evaluación estandarizada y reproducible
+    \item Reducción de tiempo de documentación manual
+    \item Acceso a interpretaciones clínicas automáticas
+    \item Seguimiento longitudinal del paciente
+  \end{itemize}
+  
+  \textbf{Para el Paciente:}
+  \begin{itemize}
+    \item Intervención personalizada basada en datos objetivos
+    \item Cueing auditivo para sincronización de marcha
+    \item Sesiones de duración controlada y científicamente diseñadas
+    \item Feedback en tiempo real de riesgo
+  \end{itemize}
+\end{conceptobox}
+
+% CAPÍTULO 2: INFORMACIÓN GENERAL DE LA PWA
+\chapter{Información General de la Plataforma}
+
+\section{Acceso y Autenticación}
+
+\subsection{URL de Acceso}
+
+La plataforma está disponible en producción en:
+
+\begin{center}
+  \fcolorbox{darkred}{lightred}{
+    \parbox{0.8\textwidth}{
+      \centering
+      \texttt{\Large https://cartilla-parkinson-angie.vercel.app}
+    }
+  }
+\end{center}
+
+\subsection{Escudo de Acceso Profesional}
+
+Al acceder a la PWA, la primera pantalla presenta un \textbf{Escudo de Acceso Profesional}:
+
+\begin{advertenciabox}
+  \textbf{SISTEMA DE USO RESTRINGIDO}
+  
+  Antes de continuar, debe declarar:
+  \begin{enumerate}
+    \item Posesión de tarjeta profesional vigente (Colegio de Fisioterapeutas, Colegio Médico, etc.)
+    \item Aceptación de responsabilidad sobre integridad del paciente
+    \item Compromiso con confidencialidad de datos bajo Ley 1581 de 2012
+  \end{enumerate}
+  
+  \textbf{Al hacer clic en ``Declaro ser profesional y acepto los términos'', usted asume estas responsabilidades legales.}
+\end{advertenciabox}
+
+\section{Arquitectura General de la PWA}
+
+La plataforma se estructura en 5 módulos principales:
+
+\begin{enumerate}
+  \item \textbf{Perfil del Paciente:} Registro de datos demográficos y clínicos
+  \item \textbf{Batería de Evaluación Clínica:} 4 pruebas estandarizadas
+  \item \textbf{Estimulación Rítmica Sensorial (Cueing):} Metrónomo clínico
+  \item \textbf{Monitoreo de Sesión:} Contador de tiempo y fases protocolizadas
+  \item \textbf{Seguimiento Meta Terapéutica:} Registro de hallazgos y guardado de datos
+\end{enumerate}
+
+% CAPÍTULO 3: GUÍA DE NAVEGACIÓN PASO A PASO
+\chapter{Guía Detallada de Navegación}
+
+\section{Paso 1: Aceptación del Escudo Profesional}
+
+\textbf{Acción:} Haga clic en el botón \texttt{``Declaro ser profesional y acepto los términos''}.
+
+\textbf{Resultado:} La pantalla se actualiza y muestra el contenido de la PWA.
+
+\begin{conceptobox}
+  \textbf{Nota importante:} Este paso verifica que solo profesionales acreditados accedan. Si no es profesional sanitario o no tiene responsabilidad clínica sobre pacientes, \textbf{no debe continuar}.
+\end{conceptobox}
+
+\section{Paso 2: Completar Perfil del Paciente}
+
+\subsection{Campos Obligatorios}
+
+Una vez dentro de la PWA, la primera sección es \textbf{``Perfil del Paciente''} con los siguientes campos:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|p{3cm}|p{4cm}|p{4cm}|}
+    \hline
+    \textbf{Campo} & \textbf{Tipo} & \textbf{Descripción} \\
+    \hline
+    Nombre Completo & Texto & Identificación del paciente \\
+    \hline
+    Estadio Hoehn y Yahr & Selector (I-III) & Fase de Parkinson \\
+    \hline
+    MMSE & Número (0-30) & Mini Mental State Examination \\
+    \hline
+    Profesional Responsable & Texto & Nombre del fisioterapeuta/médico \\
+    \hline
+    Evaluación Socio-Ambiental & Texto largo & Descripción de barreras en el hogar \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Explicación Detallada de Cada Campo}
+
+\subsubsection{Nombre Completo}
+
+\textbf{Uso:} Identificación unívoca del paciente en registros.
+
+\textbf{Consideraciones:} 
+\begin{itemize}
+  \item Completar con nombre y apellidos como aparecen en documento de identidad
+  \item Es crítico para garantizar trazabilidad clínica
+\end{itemize}
+
+\subsubsection{Estadio Hoehn y Yahr}
+
+\textbf{Escala de Clasificación del Parkinson:}
+
+\begin{conceptobox}
+  \begin{itemize}
+    \item \textbf{Estadio I:} Síntomas unilaterales leves, sin afectación funcional significativa
+    \item \textbf{Estadio II:} Síntomas bilaterales o de línea media, sin trastornos del equilibrio
+    \item \textbf{Estadio III:} Enfermedad bilateral leve, inestabilidad postural incipiente pero independencia en actividades diarias
+  \end{itemize}
+  
+  \textbf{Nota:} Esta PWA está diseñada SOLO para Estadios I-III. Estadios IV-V requieren intervención diferente.
+\end{conceptobox}
+
+\subsubsection{MMSE (Mini Mental State Examination)}
+
+\textbf{Descripción:} Evaluación cognitiva breve (puntuación 0-30).
+
+\textbf{Interpretación:}
+\begin{itemize}
+  \item $\geq 24$: Cognición preservada (requiere esta PWA)
+  \item 18-23: Deterioro cognitivo leve
+  \item $<18$: Deterioro cognitivo moderado a severo
+\end{itemize}
+
+\textbf{Requisito PWA:} La plataforma requiere MMSE $\geq 24$ para garantizar capacidad de consentimiento y comprensión del protocolo.
+
+\subsubsection{Profesional Responsable}
+
+\textbf{Uso:} Documentación de responsabilidad legal y clínica.
+
+\textbf{Formato sugerido:} ``Lic. [Nombre] [Apellido]'' o ``Dr./Dra. [Nombre] [Apellido]''
+
+\subsubsection{Evaluación Socio-Ambiental}
+
+\textbf{Descripción:} Campo de texto libre para documentar:
+
+\begin{itemize}
+  \item \textbf{Red de apoyo:} ¿Con quién vive? ¿Familiares disponibles?
+  \item \textbf{Barreras en el hogar:} Alfombras sueltas, escaleras sin barandilla, iluminación deficiente
+  \item \textbf{Factores de riesgo ambiental:} Pisos resbaladizos, muebles bajos
+  \item \textbf{Accesibilidad:} ¿Hay espacios seguros para caminar?
+\end{itemize}
+
+\textbf{Ejemplo:}
+\begin{ejemplobox}
+  ``Paciente vive con esposa. Hogar de dos plantas con escaleras sin barandilla. Piso principal con alfombra en sala (factor de riesgo). Baño con barra de apoyo. Pasillos amplios y bien iluminados. Riesgo moderado por escaleras y alfombra.''
+\end{ejemplobox}
+
+\section{Paso 3: Seleccionar y Ejecutar Pruebas Clínicas}
+
+Después de completar el perfil, el siguiente módulo es \textbf{``Batería de Evaluación Clínica''} con 4 pruebas:
+
+\begin{center}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Prueba} & \textbf{Sigla} & \textbf{Función} \\
+    \hline
+    Timed Up and Go Cognitivo & TUG & Movilidad y doble tarea \\
+    \hline
+    Berg Balance Scale & BBS & Equilibrio estático/dinámico \\
+    \hline
+    Functional Gait Assessment & FGA & Estabilidad de marcha \\
+    \hline
+    UPDRS Motor & UPDRS & Progresión de síntomas motores \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\textbf{Requisito mínimo:} Completar al menos 2 pruebas para habilitar el botón ``Guardar Valoración''.
+
+% CAPÍTULO 4: DESCRIPCIÓN DETALLADA DE PRUEBAS
+\chapter{Descripción Exhaustiva de Cada Prueba Clínica}
+
+\section{Prueba 1: TUG Cognitivo (Timed Up and Go)}
+
+\subsection{¿Qué es?}
+
+El \textbf{TUG Cognitivo} es una adaptación de la prueba clásica ``Timed Up and Go'' que añade un componente de doble tarea cognitiva para evaluar simultáneamente movilidad y función ejecutiva.
+
+\subsection{Fundamento Clínico}
+
+En Parkinson, la doble tarea (realizar dos actividades cognitivas simultáneamente, como contar regresivamente mientras se camina) evidencia:
+
+\begin{itemize}
+  \item \textbf{Automaticidad perdida:} Pacientes normales mantienen ritmo; pacientes con Parkinson disminuyen velocidad
+  \item \textbf{Fallos de atención dividida:} Manifestación de disfunción de ganglios basales
+  \item \textbf{Riesgo aumentado de caídas:} Alteración de automatismo = pérdida de equilibrio
+\end{itemize}
+
+\subsection{Protocolo Detallado}
+
+\subsubsection{Preparación}
+
+\begin{enumerate}
+  \item Paciente sentado en silla con brazos (altura estándar $\approx 46$cm)
+  \item Distancia de 3 metros marcada claramente en el piso
+  \item Espacio libre de obstáculos
+  \item Paciente con calzado seguro (no calcetines solos)
+\end{enumerate}
+
+\subsubsection{Ejecución}
+
+\begin{enumerate}
+  \item \textbf{Instrucción al paciente:} ``Cuando diga 'ya', cuente regresivamente desde 100 de 7 en 7 (100, 93, 86...). Luego, levántese, camine 3 metros, gire 180 grados y regrese. Continúe contando todo el tiempo''.
+  \item \textbf{Acción del profesional:}
+  \begin{itemize}
+    \item Inicia cronómetro en el sitio.io (el botón ``INICIAR'' en la PWA)
+    \item Observa: bradicinesia, congelamiento, desequilibrio
+    \item Nota comportamiento: ¿dejó de contar? ¿redujo velocidad de marcha?
+  \end{itemize}
+  \item \textbf{Fin:} Cuando paciente regresa a la silla y se sienta, presiona ``DETENER''
+\end{enumerate}
+
+\subsection{Interpretación de Resultados}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Tiempo} & \textbf{Clasificación} & \textbf{Riesgo} \\
+    \hline
+    $< 10$ segundos & Normal & Bajo \\
+    \hline
+    11-20 segundos & Riesgo leve & Medio \\
+    \hline
+    $> 20$ segundos & Riesgo alto & Alto \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\textbf{Interpretación en la PWA:}
+
+El sistema automáticamente mostrará:
+\begin{itemize}
+  \item \textbf{Estado:} ``Completa''
+  \item \textbf{Tiempo capturado:} (ej: ``8.5 segundos'')
+  \item \textbf{Clasificación de riesgo:} ✅ Riesgo Bajo
+\end{itemize}
+
+\subsection{Consideraciones Clínicas Avanzadas}
+
+\begin{advertenciabox}
+  \textbf{Interpretación Clínica Crítica:}
+  
+  Si el paciente \textbf{dejó de contar regresivamente}, eso es más significativo que el tiempo total. Indica fallo atencional grave, sugestivo de:
+  \begin{itemize}
+    \item Déficit ejecutivo severo
+    \item Posible deterioro cognitivo no diagnosticado
+    \item Necesidad de valoración neuropsicológica
+  \end{itemize}
+  
+  La PWA no captura esto automáticamente; \textbf{el profesional debe registrarlo} en el campo de observaciones.
+\end{advertenciabox}
+
+\section{Prueba 2: BBS (Berg Balance Scale)}
+
+\subsection{¿Qué es?}
+
+La \textbf{Berg Balance Scale} es un instrumento de 14 ítems que evalúa equilibrio estático y dinámico en pacientes con riesgo de caída. Es el estándar de oro en neurología para predicción de caídas.
+
+\subsection{Componentes Evaluados}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|p{5cm}|p{5cm}|}
+    \hline
+    \textbf{Equilibrio Estático} & \textbf{Equilibrio Dinámico} \\
+    \hline
+    1. Sedente a bipedestación & 4. Bipedestación a sedente \\
+    2. Bipedestación sin apoyo & 5. Transferencias \\
+    3. Sedente sin apoyo & 10. Giro para mirar atrás \\
+    6. Bipedestación con ojos cerrados & 11. Giro 360 grados \\
+    7. Bipedestación con pies juntos & 13. Bipedestación en tándem \\
+    & 14. Bipedestación a una pierna \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Protocolo Detallado para Cada Ítem}
+
+\subsubsection{Ítem 1: Sedente a Bipedestación}
+
+\textbf{Instrucción:} ``Levántese de la silla sin usar brazos''
+
+\textbf{Puntuación (0-4):}
+\begin{itemize}
+  \item \textbf{0:} Incapaz sin ayuda
+  \item \textbf{1:} Necesita máxima asistencia
+  \item \textbf{2:} Necesita asistencia mínima o supervisión
+  \item \textbf{3:} Capaz sin ayuda, pero usa brazos
+  \item \textbf{4:} Capaz sin ayuda, sin usar brazos
+\end{itemize}
+
+\textbf{Observación clínica en Parkinson:}
+\begin{itemize}
+  \item Lentitud de movimiento (bradicinesia)
+  \item Pérdida de movimientos asociados (brazos)
+  \item Dificultad inicial (congelamiento)
+\end{itemize}
+
+\subsubsection{Ítem 2: Bipedestación sin Apoyo}
+
+\textbf{Instrucción:} ``Manténgase de pie sin aferrarse, durante 2 minutos''
+
+\textbf{Puntuación (0-4):}
+\begin{itemize}
+  \item \textbf{0:} Requiere sujeción constante
+  \item \textbf{1:} Sujeción activa continua
+  \item \textbf{2:} Sujeción activa intermitente
+  \item \textbf{3:} Puede mantenerse 2 minutos con dificultad
+  \item \textbf{4:} Bipedestación estable sin dificultad
+\end{itemize}
+
+\subsubsection{Ítem 3: Sedente sin Apoyo}
+
+\textbf{Instrucción:} ``Siéntese con manos cruzadas sobre pecho, durante 2 minutos''
+
+\textbf{Evaluación:} Estabilidad del tronco en ausencia de apoyo de extremidades
+
+\subsubsection{Ítem 4: Bipedestación a Sedente}
+
+\textbf{Instrucción:} ``Siéntese de forma controlada''
+
+\textbf{Observación en Parkinson:}
+\begin{itemize}
+  \item ¿Cae hacia atrás sin control?
+  \item ¿Mira atrás antes de sentarse? (reflejo protector normal)
+  \item ¿Pérdida de movimientos asociados?
+\end{itemize}
+
+\subsubsection{Ítem 5: Transferencias}
+
+\textbf{Instrucción:} ``Muévase de una silla a otra sin armadura''
+
+\textbf{Criterio:} Cambio de posición sin necesidad de brazos
+
+\subsubsection{Ítem 6: Bipedestación con Ojos Cerrados}
+
+\textbf{Instrucción:} ``Cierre los ojos y manténgase de pie durante 10 segundos''
+
+\textbf{Crítico en Parkinson:} La propriocepción está afectada; sin visión, inestabilidad aumenta significativamente
+
+\subsubsection{Ítem 7: Bipedestación con Pies Juntos}
+
+\textbf{Instrucción:} ``Pies juntos, talones casi tocándose, manténgase sin apoyo''
+
+\textbf{Base de sustentación:} Se reduce; desafío mayor de equilibrio
+
+\subsubsection{Ítem 8: Alcance hacia Adelante con Brazo Extendido}
+
+\textbf{Instrucción:} ``Extienda el brazo y alcance lo máximo que pueda hacia adelante sin perder equilibrio''
+
+\textbf{Medida:} Distancia en centímetros (distancia normal: $\geq 25$cm)
+
+\subsubsection{Ítem 9: Recoger Objeto del Piso}
+
+\textbf{Instrucción:} ``Recoja este objeto del piso''
+
+\textbf{Observación:} 
+\begin{itemize}
+  \item Técnica de flexión (cadera vs. espalda)
+  \item Pérdida de equilibrio durante el descenso
+\end{itemize}
+
+\subsubsection{Ítem 10: Giro para Mirar Atrás}
+
+\textbf{Instrucción:} ``Gire su cabeza y mire hacia atrás por encima de cada hombro''
+
+\textbf{Riesgo en Parkinson:} Pérdida de estabilidad, especialmente en pacientes con freezing
+
+\subsubsection{Ítem 11: Giro de 360 Grados}
+
+\textbf{Instrucción:} ``Gire lentamente 360 grados''
+
+\textbf{Observación:}
+\begin{itemize}
+  \item Velocidad (bradicinesia)
+  \item Número de pasos (normal: $\leq 12$)
+  \item Congelamiento durante la rotación (freezing)
+\end{itemize}
+
+\subsubsection{Ítem 12: Colocar Pie sobre Escalón}
+
+\textbf{Instrucción:} ``Coloque un pie sobre el escalón, manteniendo equilibrio sin apoyo''
+
+\textbf{Evaluación:} Capacidad de mantener equilibrio unipodal
+
+\subsubsection{Ítem 13: Bipedestación en Tándem}
+
+\textbf{Instrucción:} ``Ponga un pie directamente frente al otro (en línea), manténgase sin apoyo durante 30 segundos''
+
+\textbf{Dificultad progresiva:} Mayor desafío que pies separados
+
+\subsubsection{Ítem 14: Bipedestación a Una Pierna}
+
+\textbf{Instrucción:} ``Levante una pierna sin tocar el piso, manténgase durante 10 segundos''
+
+\textbf{Criterio de éxito:} Capacidad de mantener la posición sin perder equilibrio
+
+\subsection{Puntuación Total BBS}
+
+\textbf{Rango:} 0-56 puntos
+
+\textbf{Interpretación:}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Puntuación} & \textbf{Riesgo de Caída} & \textbf{Acción Recomendada} \\
+    \hline
+    46-56 & Bajo riesgo & Continuar actividad normal \\
+    \hline
+    40-45 & Riesgo moderado & Intervención preventiva moderada \\
+    \hline
+    $< 45$ & \textbf{RIESGO ALTO} & \textbf{Intervención inmediata requerida} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\textbf{Advertencia Clínica:}
+
+\begin{advertenciabox}
+  Una puntuación \textbf{$< 45/56$ es INDICADOR CRÍTICO de riesgo inminente de caídas múltiples}. Requiere:
+  \begin{itemize}
+    \item Intervención preventiva inmediata
+    \item Aumento de frecuencia de seguimiento
+    \item Posible ajuste de medicación
+    \item Modificación ambiental del hogar
+    \item Consideración de asistencia en la marcha (bastón, andador)
+  \end{itemize}
+\end{advertenciabox}
+
+\subsection{Cómo Usar BBS en la PWA}
+
+La PWA presenta 14 botones con opciones 0-4 para cada ítem:
+
+\begin{enumerate}
+  \item Ejecute cada maniobra según el protocolo descrito
+  \item Asigne puntuación inmediatamente (0-4)
+  \item Haga clic en el botón correspondiente
+  \item La PWA suma automáticamente
+  \item Al completar los 14 ítems, verá:
+  \begin{itemize}
+    \item Puntuación total (X/56)
+    \item Interpretación automática de riesgo
+    \item El estado cambia a ``Completa''
+  \end{itemize}
+\end{enumerate}
+
+\section{Prueba 3: FGA (Functional Gait Assessment)}
+
+\subsection{¿Qué es?}
+
+\textbf{FGA} es una escala de 10 ítems que evalúa la estabilidad de la marcha bajo diferentes condiciones de desafío. Es particularmente útil en Parkinson para detectar freezing y adaptación de marcha a obstáculos.
+
+\subsection{Los 10 Ítems}
+
+\begin{enumerate}
+  \item \textbf{Marcha en superficie plana}
+  \item \textbf{Cambio de velocidad de marcha}
+  \item \textbf{Marcha con giro horizontal de cabeza}
+  \item \textbf{Marcha con giro vertical de cabeza}
+  \item \textbf{Giro y pivote durante la marcha}
+  \item \textbf{Paso sobre obstáculo}
+  \item \textbf{Marcha con base estrecha}
+  \item \textbf{Marcha con ojos cerrados}
+  \item \textbf{Marcha hacia atrás}
+  \item \textbf{Subir y bajar escaleras}
+\end{enumerate}
+
+\subsection{Protocolo y Puntuación}
+
+Cada ítem se puntúa de 0-3:
+
+\begin{itemize}
+  \item \textbf{0:} Pérdida normal del equilibrio, puede caer (requerería sujeción inmediata)
+  \item \textbf{1:} Pérdida de equilibrio, se recupera sin sujeción; puede tambalearse pero se estabiliza
+  \item \textbf{2:} Inestabilidad mínima; camina con confianza
+  \item \textbf{3:} Marcha normal, sin inestabilidad observable
+\end{itemize}
+
+\subsubsection{Ítem 1: Marcha en Superficie Plana}
+
+\textbf{Instrucción:} ``Camine 10 metros a paso normal''
+
+\textbf{Observación:}
+\begin{itemize}
+  \item Longitud de paso (reducida en Parkinson)
+  \item Cadencia (velocidad de pasos)
+  \item Balanceo de brazos (reducido)
+  \item Congelamiento inicial o terminal
+\end{itemize}
+
+\subsubsection{Ítem 2: Cambio de Velocidad}
+
+\textbf{Instrucción:} ``Camine a paso lento 5 metros, luego a paso normal 5 metros, luego rápido 5 metros''
+
+\textbf{Crítico en Parkinson:} Dificultad para modular velocidad es característica. Pueden no lograrlo.
+
+\subsubsection{Ítem 3 y 4: Marcha con Giros de Cabeza}
+
+\textbf{Instrucción:} ``Camine 10 metros mientras gira la cabeza lado a lado (horizontal) / arriba y abajo (vertical)''
+
+\textbf{Fundamento:} Los giros de cabeza durante la marcha requieren integración vestibular-cerebelosa. En Parkinson, esto causa inestabilidad.
+
+\subsubsection{Ítem 5: Giro y Pivote durante la Marcha}
+
+\textbf{Instrucción:} ``Camine 10 metros, luego gire 180 grados''
+
+\textbf{Observación:}
+\begin{itemize}
+  \item Velocidad de rotación
+  \item Congelamiento durante el giro (freezing)
+  \item Base de sustentación durante la rotación
+\end{itemize}
+
+\subsubsection{Ítem 6: Paso sobre Obstáculo}
+
+\textbf{Instrucción:} ``Camine sobre estos obstáculos sin modificar ritmo''
+
+\textbf{Desafío:} Requiere adaptación visomotora. En Parkinson, pueden frotar con los pies.
+
+\subsubsection{Ítem 7: Marcha con Base Estrecha}
+
+\textbf{Instrucción:} ``Camine en línea recta (un pie frente al otro) durante 10 metros''
+
+\textbf{Dificultad aumentada:} Reduce base de sustentación. Inestabilidad esperada en Parkinson.
+
+\subsubsection{Ítem 8: Marcha con Ojos Cerrados}
+
+\textbf{Instrucción:} ``Cierre los ojos y camine 10 metros (supervisor muy cercano por seguridad)''
+
+\textbf{Crítico:} Sin aferencia visual, la propriocepción deteriorada en Parkinson causa riesgo alto de caída.
+
+\subsubsection{Ítem 9: Marcha Hacia Atrás}
+
+\textbf{Instrucción:} ``Camine hacia atrás 10 metros (supervisor vigilando)''
+
+\textbf{Dificultad:} Requiere integración compleja. Riesgo muy alto en Parkinson.
+
+\subsubsection{Ítem 10: Escaleras}
+
+\textbf{Instrucción:} ``Suba 6-8 escalones con barandilla. Baje''
+
+\textbf{Observación:}
+\begin{itemize}
+  \item Patrón de marcha (paso a paso vs. alternado)
+  \item Uso de barandilla
+  \item Congelamiento en inicio o al cambiar de dirección
+\end{itemize}
+
+\subsection{Puntuación Total FGA}
+
+\textbf{Rango:} 0-30 puntos
+
+\textbf{Interpretación:}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Puntuación} & \textbf{Interpretación} \\
+    \hline
+    $\geq 22$ & Bajo riesgo de caída \\
+    \hline
+    19-21 & Riesgo moderado \\
+    \hline
+    $< 19$ & Alto riesgo de caída \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\section{Prueba 4: UPDRS Motor (Unified Parkinson's Disease Rating Scale)}
+
+\subsection{¿Qué es?}
+
+\textbf{UPDRS} es la escala más utilizada internacionalmente para evaluar severidad de síntomas motores en Parkinson. La sección Motor (Parte III) es de particular interés en esta PWA.
+
+\subsection{Componentes del UPDRS Motor}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|p{6cm}|p{4cm}|}
+    \hline
+    \textbf{Ítem} & \textbf{Puntuación} \\
+    \hline
+    Rigidez & 0-4 \\
+    \hline
+    Bradicinesia & 0-4 \\
+    \hline
+    Tremor & 0-4 \\
+    \hline
+    Postura & 0-2 \\
+    \hline
+    Marcha & 0-2 \\
+    \hline
+    Estabilidad Postural & 0-2 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{En la PWA: Campo de Texto Libre}
+
+Diferente a BBS y FGA, UPDRS en esta PWA se captura mediante un \textbf{campo de texto libre} donde el profesional registra:
+
+\begin{itemize}
+  \item Puntuación motor UPDRS parcial o total
+  \item Hallazgos principales
+  \item Severidad de síntomas
+  \item Cambios desde última evaluación
+\end{itemize}
+
+\textbf{Ejemplo de Registro:}
+
+\begin{ejemplobox}
+  ``UPDRS motor: 18/108. Bradicinesia leve en extremidades superiores. Rigidez de rueda dentada en cuello. Tremor en reposo mínimo. Postura levemente inclinada. Marcha con pasos cortos sin congelamiento en esta visita. Estabilidad postural preservada.''
+\end{ejemplobox}
+
+\subsection{Interpretación Clínica}
+
+\textbf{Severidad según UPDRS Motor Total:}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Puntuación} & \textbf{Interpretación} \\
+    \hline
+    0-20 & Síntomas leves \\
+    \hline
+    21-50 & Síntomas moderados \\
+    \hline
+    51-108 & Síntomas severos \\
+    \hline
+  \end{tabular}
+\end{table}
+
+% CAPÍTULO 5: MÓDULOS COMPLEMENTARIOS
+\chapter{Módulos Complementarios de la PWA}
+
+\section{Estimulación Rítmica Sensorial (Cueing)}
+
+\subsection{¿Qué es el Cueing?}
+
+\textbf{Cueing} (del inglés: ``pista rítmica'') es una técnica neurorrehabilitadora que usa estímulos auditivos, visuales o táctiles para sincronizar la marcha del paciente.
+
+\subsection{Fundamento Neurocientífico}
+
+En Parkinson, los ganglios basales están dañados. Estos normalmente generan ritmo automático de movimiento. Sin ellos:
+
+\begin{itemize}
+  \item La marcha se vuelve errática
+  \item Aparece \textbf{congelamiento} (freezing of gait)
+  \item El paciente debe usar conscientemente la corteza cerebral para planificar cada paso
+\end{itemize}
+
+El \textbf{cueing auditivo} ``secuestra'' la corteza auditiva, permitiendo que otro sistema neural genere ritmo automático. Paradójicamente, el paciente camina mejor \textbf{siguiendo un metrónomo que caminando libremente}.
+
+\subsection{Implementación en la PWA}
+
+La PWA incluye un \textbf{metrónomo clínico} ajustable:
+
+\begin{itemize}
+  \item \textbf{Rango de BPM:} 40-120 (latidos por minuto)
+  \item \textbf{Estímulo:} Sonido de tono puro (880 Hz, duración breve)
+  \item \textbf{Indicador visual:} Círculo blanco que pulsea sincronizadamente
+\end{itemize}
+
+\subsection{Cómo Usarlo}
+
+\begin{enumerate}
+  \item \textbf{Establecer BPM:} Mueva el slider a la velocidad deseada (ej: 60 BPM)
+  
+  \textbf{Consideración:} Cadencia normal de marcha en adultos = 100-120 pasos/min. En Parkinson, empezar más lento (60-80 BPM)
+  
+  \item \textbf{Indicador visual:} Observará un círculo que se ilumina con cada pulso
+  
+  \item \textbf{Instrucción al paciente:} ``Camine sincronizando sus pasos con cada sonido que oye''
+  
+  \item \textbf{Observación:} Monitorear:
+  \begin{itemize}
+    \item ¿Sincronización con metrónomo?
+    \item ¿Mejora de velocidad respecto a marcha libre?
+    \item ¿Reducción de congelamiento?
+    \item ¿Mejora de amplitud de paso?
+  \end{itemize}
+  
+  \item \textbf{Registrar cambios:} Si hubo mejora significativa, documéntelo en ``Seguimiento Meta Terapéutica''
+\end{enumerate}
+
+\section{Monitoreo de Sesión}
+
+\subsection{Estructura de la Sesión}
+
+\textbf{PROTOCOLO OPTIMIZADO: 30 MINUTOS TOTALES}
+
+La PWA implementa un protocolo de sesión de 30 minutos dividido en 3 fases:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Fase} & \textbf{Duración} & \textbf{Objetivo} & \textbf{Actividades} \\
+    \hline
+    1. Calentamiento & 5 min & Preparación neuromuscular & Movilidad articular, respiración \\
+    \hline
+    2. Intervención Digital & 20 min & Aplicación de estímulos & Cueing, evaluación dinámica \\
+    \hline
+    3. Enfriamiento & 5 min & Retorno a homeostasis & Estiramientos, retroalimentación \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{¿Por Qué 30 Minutos?}
+
+Esta duración fue seleccionada basándose en evidencia clínica:
+
+\begin{conceptobox}
+  \begin{itemize}
+    \item \textbf{$< 20$ min:} Insuficiente para neuroplasticidad
+    \item \textbf{20-30 min:} Óptimo para sesión de intervención (tolerancia neuromuscular, atención)
+    \item \textbf{$> 45$ min:} Fatiga cognitiva, fatiga motora, reducción de atención
+  \end{itemize}
+  
+  El protocolo 5/20/5 respeta los principios de rehabilitación neuromuscular mientras minimiza fatiga.
+\end{conceptobox}
+
+\subsection{Uso del Cronómetro en la PWA}
+
+\begin{enumerate}
+  \item \textbf{Inicio:} Haga clic en el botón \texttt{``Play''} (triángulo) al comenzar intervención
+  
+  \item \textbf{Visualización:} La PWA muestra tiempo regresivo (30:00 → 00:00)
+  
+  \item \textbf{Cambio de fases:} Los bloques de ``Calentamiento'', ``Intervención Digital'', ``Enfriamiento'' se iluminan automáticamente según tiempo restante:
+  \begin{itemize}
+    \item Bloque 1 iluminado: segundos $> 1500$ (25+ minutos)
+    \item Bloque 2 iluminado: segundos entre 1500 y 300 (5-25 min)
+    \item Bloque 3 iluminado: segundos $< 300$ (últimos 5 minutos)
+  \end{itemize}
+  
+  \item \textbf{Pausa:} Haga clic en ``Pausa'' (dos líneas) si necesita interrumpir
+  
+  \item \textbf{Reinicio:} Botón ``Reinicio'' resetea a 30:00
+\end{enumerate}
+
+\subsection{Monitoreo Clínico Simultáneo}
+
+\textbf{El profesional debe:}
+
+\begin{enumerate}
+  \item Observar respuesta del paciente a cada estímulo
+  \item Anotar cambios en:
+  \begin{itemize}
+    \item Fatiga (escala 1-10)
+    \item Calidad de marcha
+    \item Participación/motivación
+    \item Eventos adversos (caídas, mareos, dolor)
+  \end{itemize}
+  \item Documentar en ``Seguimiento Meta Terapéutica''
+\end{enumerate}
+
+\section{Seguimiento Meta Terapéutica}
+
+\subsection{Campo de Registro Diario}
+
+Este módulo final permite documentación de:
+
+\begin{itemize}
+  \item \textbf{Observaciones clínicas:} Hallazgos principales de la sesión
+  \item \textbf{Respuesta del paciente:} Tolerancia, fatiga, motivación
+  \item \textbf{Cambios funcionales:} Mejora o deterioro en pruebas
+  \item \textbf{Recomendaciones:} Ajustes para próxima sesión
+\end{itemize}
+
+\subsection{Requisito de Integridad}
+
+\textbf{Mínimo requerido para guardar:}
+
+\begin{advertenciabox}
+  \textbf{Completar al menos 2 pruebas clínicas (de 4 disponibles)}
+  
+  Esto garantiza:
+  \begin{itemize}
+    \item Evaluación multimodal del paciente
+    \item Confiabilidad de interpretación clínica
+    \item Cumplimiento de estándares de protocolización
+  \end{itemize}
+  
+  Hasta que no cumpla este requisito, el botón ``Guardar Valoración'' permanecerá deshabilitado.
+\end{advertenciabox}
+
+\subsection{Ejemplo de Registro Completo}
+
+\begin{ejemplobox}
+  \textbf{Paciente:} Juan Pérez López \\
+  \textbf{Estadio:} II \\
+  \textbf{Fecha:} 20/05/2026 \\
+  \textbf{Profesional:} Lic. Laura Gómez
+  
+  \vspace{0.3cm}
+  
+  \textbf{Pruebas Realizadas:}
+  \begin{itemize}
+    \item TUG: 8.5 s (Completa - Riesgo Bajo)
+    \item UPDRS Motor: 18/108 (Síntomas leves)
+  \end{itemize}
+  
+  \textbf{Observaciones:}
+  ``Sesión tolerada adecuadamente. Paciente refiere mejoría subjetiva con cueing auditivo a 70 BPM. Marcha más fluida, menos ``pasos arrastrados''. Bradicinesia leve en extremidad superior derecha pero sin cambios desde sesión anterior. Paciente motivado y adherente al protocolo. Tolerancia completa de 30 minutos sin fatiga.''
+  
+  \textbf{Recomendaciones:}
+  ``Continuar con cueing a 70 BPM. Incrementar próxima sesión a 75 BPM si tolera. Realizar seguimiento en 1 semana. Reforzar ejercicios en casa (marcha con metrónomo 10 min diarios).''
+\end{ejemplobox}
+
+% CAPÍTULO 6: CASOS CLÍNICOS PRÁCTICOS
+\chapter{Casos Clínicos Prácticos}
+
+\section{Caso 1: Paciente con Riesgo Bajo}
+
+\subsection{Presentación}
+
+\begin{itemize}
+  \item \textbf{Nombre:} Carlos Méndez Rojas
+  \item \textbf{Edad:} 68 años
+  \item \textbf{Estadio Hoehn-Yahr:} II
+  \item \textbf{Diagnóstico:} Parkinson idiopático, 3 años de evolución
+  \item \textbf{MMSE:} 27 (normal)
+\end{itemize}
+
+\subsection{Resultados de Pruebas}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Prueba} & \textbf{Resultado} & \textbf{Interpretación} \\
+    \hline
+    TUG & 9.2 seg & Riesgo Bajo \\
+    \hline
+    BBS & 48/56 & Riesgo Bajo \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Interpretación Clínica}
+
+\begin{itemize}
+  \item Riesgo de caída bajo en ambas pruebas
+  \item Equilibrio relativamente preservado
+  \item Movilidad funcional adecuada
+  \item Candidato óptimo para intervención preventiva
+\end{itemize}
+
+\subsection{Plan de Intervención}
+
+\begin{enumerate}
+  \item Sesiones 2x/semana de 30 minutos
+  \item Cueing auditivo a 70 BPM (marcha normal adaptada)
+  \item Enfoque en mantención de movilidad y prevención de deterioro
+  \item Ejercicios en casa: marcha con metrónomo 10 min/día
+\end{enumerate}
+
+\section{Caso 2: Paciente con Riesgo Alto}
+
+\subsection{Presentación}
+
+\begin{itemize}
+  \item \textbf{Nombre:} María Rodríguez González
+  \item \textbf{Edad:} 75 años
+  \item \textbf{Estadio Hoehn-Yahr:} III
+  \item \textbf{MMSE:} 25 (límite normal)
+  \item \textbf{Antecedentes:} 2 caídas en últimos 3 meses
+\end{itemize}
+
+\subsection{Resultados de Pruebas}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Prueba} & \textbf{Resultado} & \textbf{Interpretación} \\
+    \hline
+    TUG & 22.5 seg & \textbf{RIESGO ALTO} \\
+    \hline
+    BBS & 38/56 & \textbf{RIESGO ALTO} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Interpretación Clínica}
+
+\begin{advertenciabox}
+  \textbf{ALARMA CLÍNICA}
+  
+  Paciente con riesgo inminente de caídas múltiples. Requiere intervención urgente:
+  \begin{itemize}
+    \item Evaluación neurológica adicional (posible ajuste medicamentoso)
+    \item Valoración oftalmológica (visión)
+    \item Valoración de ambiente en el hogar
+    \item Posible uso de andador o bastón
+  \end{itemize}
+\end{advertenciabox}
+
+\subsection{Plan de Intervención Intensivo}
+
+\begin{enumerate}
+  \item Sesiones 3x/semana inicialmente
+  \item Cueing auditivo a 50 BPM (velocidad reducida)
+  \item Supervisión constante (riesgo de caída muy alto)
+  \item Considerar derivación a neurólogo para ajuste medicamentoso
+  \item Educación familiar sobre factores de riesgo
+  \item Seguimiento estricto cada 2 semanas
+\end{enumerate}
+
+% CAPÍTULO 7: CONSIDERACIONES FINALES
+\chapter{Consideraciones Finales y Mejores Prácticas}
+
+\section{Checklist de Seguridad Antes de Cada Sesión}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    \textbf{Elemento a Verificar} & \textbf{Confirmado} \\
+    \hline
+    ¿Paciente tiene tarjeta de citas? & \checkmark \\
+    \hline
+    ¿MMSE $\geq 24$? & \checkmark \\
+    \hline
+    ¿Consentimiento informado firmado? & \checkmark \\
+    \hline
+    ¿Espacio libre de obstáculos? & \checkmark \\
+    \hline
+    ¿Paciente con calzado seguro? & \checkmark \\
+    \hline
+    ¿Supervisor/asistente presente? & \checkmark \\
+    \hline
+    ¿Medicación tomada según protocolo? & \checkmark \\
+    \hline
+    ¿No hay eventos adversos recientes (caídas, hospitalización)? & \checkmark \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\section{Frecuencia Recomendada de Intervención}
+
+\begin{conceptobox}
+  \textbf{Riesgo Bajo (BBS $> 45$):}
+  \begin{itemize}
+    \item 1-2 sesiones/semana
+    \item Duración: 30 minutos
+    \item Objetivo: Mantenimiento y prevención
+  \end{itemize}
+  
+  \textbf{Riesgo Moderado (BBS 40-45):}
+  \begin{itemize}
+    \item 2-3 sesiones/semana
+    \item Duración: 30 minutos
+    \item Objetivo: Detención de deterioro
+  \end{itemize}
+  
+  \textbf{Riesgo Alto (BBS $< 40$):}
+  \begin{itemize}
+    \item 3-4 sesiones/semana inicialmente
+    \item Duración: 30 minutos con supervisión intensiva
+    \item Objetivo: Intervención urgente
+    \item Requiere coordinación multidisciplinaria
+  \end{itemize}
+\end{conceptobox}
+
+\section{Contraindicaciones y Eventos Adversos}
+
+\subsection{Cuándo NO Usar la PWA}
+
+\begin{advertenciabox}
+  \begin{itemize}
+    \item MMSE $< 24$ (incapacidad cognitiva)
+    \item Estadio IV-V Hoehn-Yahr (severidad excesiva)
+    \item Insuficiencia cardíaca descompensada
+    \item Hipotensión ortostática severa no controlada
+    \item Fractura ósea aguda o cirugía reciente
+    \item Convulsiones no controladas
+    \item Depresión severa con ideación suicida
+  \end{itemize}
+\end{advertenciabox}
+
+\subsection{Reacciones Adversas Esperadas}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|p{3cm}|p{4cm}|p{4cm}|}
+    \hline
+    \textbf{Evento} & \textbf{¿Normal?} & \textbf{Acción} \\
+    \hline
+    Fatiga leve post-sesión & Sí & Descanso \\
+    \hline
+    Sudoración & Sí & Monitoreo \\
+    \hline
+    Mareos leves & Posible & Sentarse, rehidratación \\
+    \hline
+    Caída durante intervención & No & Detener, evaluar, reportar \\
+    \hline
+    Dolor torácico & \textbf{EMERGENCIA} & Llamar ambulancia \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\section{Integración en Protocolos Multidisciplinarios}
+
+La PWA es una \textbf{herramienta complementaria}, no un sustituto de:
+
+\begin{itemize}
+  \item Seguimiento neurológico regular
+  \item Evaluación y ajuste farmacológico
+  \item Psicología/psiquiatría (si depresión/ansiedad)
+  \item Nutrición especializada
+  \item Logopedia (si disfagia)
+  \item Terapia ocupacional (si AVD afectadas)
+\end{itemize}
+
+El fisioterapeuta debe coordinar con el equipo multidisciplinario para optimizar resultados.
+
+\section{Recomendaciones para Próxima Sesión}
+
+Basándose en resultados actuales:
+
+\begin{enumerate}
+  \item \textbf{Si Riesgo Bajo:}
+  \begin{itemize}
+    \item Incrementar BPM del cueing gradualmente (5 BPM cada 2 sesiones)
+    \item Agregar tareas cognitivas durante marcha
+    \item Educar sobre actividad física en casa
+  \end{itemize}
+  
+  \item \textbf{Si Riesgo Moderado:}
+  \begin{itemize}
+    \item Mantener BPM actual
+    \item Intensificar trabajo en equilibrio dinámico
+    \item Derivar a valoración de ambiente en hogar
+  \end{itemize}
+  
+  \item \textbf{Si Riesgo Alto:}
+  \begin{itemize}
+    \item Mantener BPM bajo (40-50)
+    \item Máxima supervisión
+    \item Contacto inmediato con médico tratante para revisión de medicación
+  \end{itemize}
+\end{enumerate}
+
+\appendix
+
+\chapter{Glosario de Términos Clínicos}
+
+\begin{description}
+  \item[\textbf{Bradicinesia}] Lentitud patológica de movimientos voluntarios
+  
+  \item[\textbf{Congelamiento (Freezing)}] Episodios súbitos e involuntarios de inmovilidad, particularmente durante la marcha
+  
+  \item[\textbf{Cueing}] Técnica de proporcionar pistas externas (auditivas, visuales, táctiles) para facilitar movimiento automático
+  
+  \item[\textbf{Escala Hoehn-Yahr}] Sistema de clasificación de severidad del Parkinson (Estadios 0-V)
+  
+  \item[\textbf{Fenómeno ``Off''}] Período de pérdida de eficacia de medicación antiparkinsonian
+  
+  \item[\textbf{Freezing of Gait}] Pérdida temporal e involuntaria de movimiento durante la marcha
+  
+  \item[\textbf{MMSE}] Mini Mental State Examination, prueba de screening cognitivo
+  
+  \item[\textbf{Neuroplasticidad}] Capacidad del sistema nervioso de reorganizarse y adaptarse
+  
+  \item[\textbf{Propiocepción}] Sentido de posición del cuerpo en el espacio
+  
+  \item[\textbf{Rigidez}] Resistencia al movimiento pasivo de una articulación
+  
+  \item[\textbf{Temblor en Reposo}] Oscilación involuntaria característica del Parkinson en posición estática
+  
+  \item[\textbf{UPDRS}] Unified Parkinson's Disease Rating Scale, escala de evaluación estándar internacional
+\end{description}
+
+\chapter{Referencias y Bibliografía Recomendada}
+
+\begin{enumerate}
+  \item Hoehn, M. M., \& Yahr, M. D. (1967). Parkinsonism: onset, progression and mortality. \textit{Neurology}, 17(5), 427-442.
+  
+  \item Berg, K. O., Wood-Dauphinee, S. L., Williams, J. I., \& Maki, B. (1992). Measuring balance in the elderly: validation of an instrument. \textit{Canadian Journal of Public Health}, 83, 7-11.
+  
+  \item Podsiadlo, D., \& Richardson, S. (1991). The timed ``Up and Go'': a test of basic functional mobility for frail elderly persons. \textit{Journal of the American Geriatrics Society}, 39(2), 142-148.
+  
+  \item Walshe, E. A., Pereira, B. P., \& Marras, C. (2015). Premotor Parkinson's disease: identifying early Parkinson's disease. \textit{Parkinson's Disease}, 2015, 364058.
+  
+  \item Almeida, L. R. S., Sherrington, C., Allen, N. E., \& Canning, C. G. (2015). Rehabilitation aimed at improving balance, functional mobility, and psychosocial functioning reduces falls in older adults with Parkinson's disease. \textit{Parkinson's Disease}, 2015, 709168.
+\end{enumerate}
+
+\end{document}
