@@ -1,0 +1,20 @@
+# Keep the Vercel upload small: the Next.js app does not need thesis/assets.
+*.pptx
+*.docx
+*.pdf
+*.jpeg
+*.jpg
+*.png
+!public/**
+ENTREGA_200526
+assets_sustentacion
+*.log
+*.aux
+*.toc
+*.out
+Manual_PWA_Parkinson_Completo.*
+tesis.md
+tesis_lineas.txt
+node_modules
+.next
+.git
