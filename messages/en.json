@@ -8,7 +8,7 @@
   },
   "header": {
     "title": "BALANX",
-    "subtitle": "Balance neuroquímico, valoración y cueing en Parkinson temprano"
+    "subtitle": "Neurochemical balance, assessment and cueing for neurodegeneration"
   },
   "profile": {
     "title": "Patient profile",
@@ -78,8 +78,8 @@
   },
   "Landing": {
     "hero": {
-      "title": "Balance neuroquímico para Parkinson temprano",
-      "subtitle": "Decision-support for assessment, rhythmic cueing and fall prevention. Built for clinicians and families supporting care at home.",
+      "title": "Clinical and home support for neurodegeneration",
+      "subtitle": "BALANX supports assessment, rhythmic cueing and between-visit follow-up. We open modules only when we have evidence and clinical judgment to stand behind — no promises we cannot keep.",
       "ctaStart": "Get started",
       "ctaLogin": "I already have an account"
     },
@@ -87,9 +87,23 @@
       "clinicalTitle": "Clinical use",
       "clinicalBody": "Assessment battery and multimodal cueing for physiotherapy sessions.",
       "homeTitle": "Home use",
-      "homeBody": "Guided routines for caregivers and people with early–moderate Parkinson’s.",
+      "homeBody": "Guided routines for caregivers and families, always under professional supervision when required.",
       "safeTitle": "Responsible use",
       "safeBody": "Does not diagnose or replace a clinician. Requires an account, terms and a use declaration."
+    },
+    "modules": {
+      "title": "Modules by condition",
+      "subtitle": "Each disease is different. We only activate a module when we can stand behind it; everything else is a roadmap, not a clinical offer.",
+      "available": "Available",
+      "roadmap": "Roadmap",
+      "parkinsonTitle": "Parkinson’s disease",
+      "parkinsonBody": "Active module today: assessment, cueing and fall-prevention support in early–moderate stages, grounded in the platform’s clinical work.",
+      "alzheimerTitle": "Alzheimer’s and cognitive decline",
+      "alzheimerBody": "Under exploration. No BALANX protocol is published yet; we do not offer condition-specific interventions here.",
+      "msaTitle": "MSA and atypical parkinsonisms",
+      "msaBody": "Under exploration. These require their own evidence and safety work before any module.",
+      "otherTitle": "Other neurodegenerative conditions",
+      "otherBody": "We capture product interest only. Joining a waitlist is not treatment and not medical advice."
     },
     "form": {
       "title": "Tell us how you will use it",
@@ -112,7 +126,7 @@
       "condParkinson": "Parkinson’s",
       "condOther": "Other neurodegenerative (coming soon)",
       "condPrivate": "Prefer not to say",
-      "conditionHint": "The product is focused on Parkinson’s today. Other modules will open with their own evidence base.",
+      "conditionHint": "Only the Parkinson’s module is active today. If you choose another condition, we log your interest; no clinical protocol is available yet.",
       "contextLabel": "Use context",
       "ctxClinic": "Clinic",
       "ctxHome": "Home",

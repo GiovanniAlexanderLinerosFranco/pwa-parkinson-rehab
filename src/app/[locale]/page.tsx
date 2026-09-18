@@ -164,6 +164,61 @@ export default function LandingPage() {
         ))}
       </section>
 
+      <section className="relative mx-auto max-w-4xl px-6 py-6">
+        <div className="mb-6 text-center">
+          <h2 className="text-2xl font-extrabold text-slate-50">{t("modules.title")}</h2>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-400">{t("modules.subtitle")}</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {[
+            {
+              title: t("modules.parkinsonTitle"),
+              body: t("modules.parkinsonBody"),
+              badge: t("modules.available"),
+              badgeClass:
+                "border-emerald-400/40 bg-emerald-500/15 text-emerald-200",
+              cardClass: "balanx-glow-emerald border-emerald-500/25",
+            },
+            {
+              title: t("modules.alzheimerTitle"),
+              body: t("modules.alzheimerBody"),
+              badge: t("modules.roadmap"),
+              badgeClass: "border-slate-600 bg-slate-900/80 text-slate-400",
+              cardClass: "opacity-90",
+            },
+            {
+              title: t("modules.msaTitle"),
+              body: t("modules.msaBody"),
+              badge: t("modules.roadmap"),
+              badgeClass: "border-slate-600 bg-slate-900/80 text-slate-400",
+              cardClass: "opacity-90",
+            },
+            {
+              title: t("modules.otherTitle"),
+              body: t("modules.otherBody"),
+              badge: t("modules.roadmap"),
+              badgeClass: "border-slate-600 bg-slate-900/80 text-slate-400",
+              cardClass: "opacity-90",
+            },
+          ].map(({ title, body, badge, badgeClass, cardClass }) => (
+            <article
+              key={title}
+              className={`balanx-glass rounded-2xl p-5 ${cardClass}`}
+            >
+              <div className="mb-3 flex items-start justify-between gap-3">
+                <h3 className="text-sm font-extrabold text-slate-100">{title}</h3>
+                <span
+                  className={`shrink-0 rounded-lg border px-2 py-1 text-[10px] font-bold uppercase tracking-wide ${badgeClass}`}
+                >
+                  {badge}
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed text-slate-400">{body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section id="empezar" className="relative mx-auto max-w-3xl px-6 pb-20">
         <div className="balanx-glass balanx-glow-cyan rounded-3xl p-6 md:p-8">
           <h2 className="text-2xl font-extrabold text-slate-50">{t("form.title")}</h2>

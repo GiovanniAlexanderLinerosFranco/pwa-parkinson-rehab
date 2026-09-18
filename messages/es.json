@@ -8,7 +8,7 @@
   },
   "header": {
     "title": "BALANX",
-    "subtitle": "Balance neuroquímico, valoración y cueing en Parkinson temprano"
+    "subtitle": "Balance neuroquímico, valoración y cueing en neurodegeneración"
   },
   "profile": {
     "title": "Perfil del paciente",
@@ -78,8 +78,8 @@
   },
   "Landing": {
     "hero": {
-      "title": "Balance neuroquímico para Parkinson temprano",
-      "subtitle": "Herramienta de apoyo para valoración, cueing rítmico y prevención de caídas. Pensada para profesionales y para familias que acompañan en casa.",
+      "title": "Apoyo clínico y en casa para neurodegeneración",
+      "subtitle": "BALANX acompaña valoración, cueing rítmico y seguimiento entre citas. Abrimos módulos solo cuando hay evidencia y criterio clínico propio — sin promesas que no podamos sostener.",
       "ctaStart": "Quiero empezar",
       "ctaLogin": "Ya tengo cuenta"
     },
@@ -87,9 +87,23 @@
       "clinicalTitle": "Uso clínico",
       "clinicalBody": "Batería de evaluación y cueing multimodal para sesiones con fisioterapeuta.",
       "homeTitle": "Uso en el hogar",
-      "homeBody": "Rutinas guiadas para cuidadores y personas con Parkinson temprano–moderado.",
+      "homeBody": "Rutinas guiadas para cuidadores y familias, siempre bajo supervisión profesional cuando corresponda.",
       "safeTitle": "Uso responsable",
       "safeBody": "No diagnostica ni sustituye al médico. Requiere cuenta, términos y declaración de uso."
+    },
+    "modules": {
+      "title": "Módulos por condición",
+      "subtitle": "Cada enfermedad es distinta. Solo activamos un módulo cuando podemos respaldarlo; el resto queda como hoja de ruta, no como oferta clínica.",
+      "available": "Disponible",
+      "roadmap": "Hoja de ruta",
+      "parkinsonTitle": "Enfermedad de Parkinson",
+      "parkinsonBody": "Módulo activo hoy: valoración, cueing y prevención de caídas en etapas tempranas–moderadas, con base en el trabajo clínico de la plataforma.",
+      "alzheimerTitle": "Alzheimer y deterioro cognitivo",
+      "alzheimerBody": "En exploración. No hay protocolo BALANX publicado aún; no ofrecemos intervenciones específicas para esta condición.",
+      "msaTitle": "Atrofia multisistémica y parkinsonismos atípicos",
+      "msaBody": "En exploración. Requieren evidencia y seguridad propias antes de cualquier módulo.",
+      "otherTitle": "Otras neurodegenerativas",
+      "otherBody": "Las registramos como interés de producto. Entrar a la lista de espera no implica tratamiento ni consejo médico."
     },
     "form": {
       "title": "Cuéntanos para qué la usarás",
@@ -112,7 +126,7 @@
       "condParkinson": "Parkinson",
       "condOther": "Otra neurodegenerativa (próximamente)",
       "condPrivate": "Prefiero no decir",
-      "conditionHint": "Hoy el producto está enfocado en Parkinson. Otros módulos se abrirán con evidencia propia.",
+      "conditionHint": "Hoy solo está activo el módulo de Parkinson. Si eliges otra condición, te registramos el interés; no hay protocolo clínico disponible todavía.",
       "contextLabel": "Contexto de uso",
       "ctxClinic": "Consultorio",
       "ctxHome": "Domicilio",
