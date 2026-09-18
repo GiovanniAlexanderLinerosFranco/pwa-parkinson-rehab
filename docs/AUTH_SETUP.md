@@ -1,4 +1,4 @@
-# Auth Cadencia (Fase 1)
+# Auth BALANX (Fase 1)
 
 ## 1) SQL en galf-core-hub
 
@@ -14,7 +14,7 @@ En `.env.local` y Vercel (Production / Preview / Development):
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - `SUPABASE_URL` (igual al hub)
 - `SUPABASE_SERVICE_ROLE_KEY`
-- `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL` (prod: URL de Vercel Cadencia)
+- `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL` (prod: `https://balanx.vercel.app`)
 
 Tras cambiar `NEXT_PUBLIC_*`: **Redeploy**.
 
@@ -22,18 +22,18 @@ Tras cambiar `NEXT_PUBLIC_*`: **Redeploy**.
 
 Dashboard → Authentication → URL Configuration.
 
-**Añadir** (no borrar TrainAIfit / Cudoku):
+**Añadir** (no borrar TrainAIfit / Cudoku ni otros productos del hub):
 
 ```
-https://pwa-parkinson-rehab.vercel.app/**
-https://pwa-parkinson-rehab.vercel.app/*/auth/callback
-https://pwa-parkinson-rehab.vercel.app/*/auth/recovery-confirm
+https://balanx.vercel.app/**
+https://balanx.vercel.app/*/auth/callback
+https://balanx.vercel.app/*/auth/recovery-confirm
 http://localhost:3000/**
 http://localhost:3000/*/auth/callback
 http://localhost:3000/*/auth/recovery-confirm
 ```
 
-No sustituyas la Site URL canónica del hub si ya es de otro producto; Cadencia usa redirects absolutos.
+No sustituyas la Site URL canónica del hub si ya es de otro producto; BALANX usa redirects absolutos.
 
 ## 4) Rutas
 
