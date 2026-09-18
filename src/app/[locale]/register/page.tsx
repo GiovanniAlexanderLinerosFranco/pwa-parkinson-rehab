@@ -7,6 +7,7 @@ import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import PasswordInput from "@/app/components/auth/PasswordInput";
 import { AuthCard, AuthShell } from "@/app/components/auth/AuthShell";
+import TermsModal from "@/app/components/TermsModal";
 import {
   clearIntent,
   mapIntentToRole,
@@ -18,6 +19,7 @@ function RegisterForm() {
   const locale = useLocale();
   const searchParams = useSearchParams();
   const t = useTranslations("AuthPages.register");
+  const [termsOpen, setTermsOpen] = useState(false);
 
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
@@ -183,7 +185,20 @@ function RegisterForm() {
                 onChange={(e) => setForm((f) => ({ ...f, acceptsTerms: e.target.checked }))}
                 className="mt-1"
               />
-              <span>{t("terms")}</span>
+              <span>
+                {t("terms")}{" "}
+                <button
+                  type="button"
+                  onClick={() => setTermsOpen(true)}
+                  className="font-bold text-cyan-300 underline-offset-2 hover:underline"
+                >
+                  {t("termsReadLink")}
+                </button>
+                {" · "}
+                <Link href="/terminos" className="text-cyan-300/80 underline-offset-2 hover:underline">
+                  {t("termsPageLink")}
+                </Link>
+              </span>
             </label>
             <label className="flex items-start gap-2 text-sm text-slate-300">
               <input
@@ -228,6 +243,7 @@ function RegisterForm() {
           </p>
         ) : null}
       </AuthCard>
+      <TermsModal open={termsOpen} onClose={() => setTermsOpen(false)} />
     </>
   );
 }

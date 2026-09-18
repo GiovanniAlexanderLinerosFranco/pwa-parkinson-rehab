@@ -6,6 +6,7 @@ import { ArrowRight, HeartHandshake, ShieldCheck, Stethoscope } from "lucide-rea
 import { Link, useRouter } from "@/i18n/navigation";
 import { brand } from "@/lib/brand";
 import BrandLogo from "@/app/components/BrandLogo";
+import TermsModal from "@/app/components/TermsModal";
 import {
   type CadenciaIntent,
   saveIntent,
@@ -54,6 +55,7 @@ export default function LandingPage() {
   const [confirmsAdult, setConfirmsAdult] = useState(false);
   const [declaresResponsible, setDeclaresResponsible] = useState(false);
   const [error, setError] = useState("");
+  const [termsOpen, setTermsOpen] = useState(false);
 
   const canContinue = useMemo(
     () =>
@@ -348,6 +350,22 @@ export default function LandingPage() {
               <p className="text-xs font-bold uppercase tracking-wide text-amber-300">
                 {t("form.termsTitle")}
               </p>
+              <p className="text-xs text-slate-400">{t("form.termsOpenHint")}</p>
+              <div className="flex flex-wrap gap-3 text-sm">
+                <button
+                  type="button"
+                  onClick={() => setTermsOpen(true)}
+                  className="font-bold text-cyan-300 underline-offset-2 hover:text-cyan-200 hover:underline"
+                >
+                  {t("form.termsReadLink")}
+                </button>
+                <Link
+                  href="/terminos"
+                  className="font-semibold text-slate-400 underline-offset-2 hover:text-slate-200 hover:underline"
+                >
+                  {t("form.termsPageLink")}
+                </Link>
+              </div>
               {[
                 ["acceptsTerms", acceptsTerms, setAcceptsTerms, "termsAccept"],
                 ["confirmsAdult", confirmsAdult, setConfirmsAdult, "adultAccept"],
@@ -379,6 +397,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      <TermsModal open={termsOpen} onClose={() => setTermsOpen(false)} />
     </div>
   );
 }

@@ -89,7 +89,7 @@
       "homeTitle": "Home use",
       "homeBody": "Guided routines for caregivers and families, always under professional supervision when required.",
       "safeTitle": "Responsible use",
-      "safeBody": "Does not diagnose or replace a clinician. Requires an account, terms and a use declaration."
+      "safeBody": "Does not make diagnoses or replace a clinician. Requires an account, terms and a use declaration."
     },
     "modules": {
       "title": "Modules by condition",
@@ -132,12 +132,67 @@
       "ctxHome": "Home",
       "ctxBoth": "Both",
       "termsTitle": "Terms and responsibility (required)",
-      "termsAccept": "I accept the terms of use and personal data processing under applicable privacy law.",
+      "termsReadLink": "Read the full terms and conditions",
+      "termsPageLink": "Open full page",
+      "termsOpenHint": "Please read them carefully before accepting. You can also open them on a separate page.",
+      "termsAccept": "I have read and accept the terms of use and personal data processing under applicable privacy law.",
       "adultAccept": "I confirm that I am of legal age.",
-      "responsibleAccept": "I understand BALANX does not diagnose, adjust medication, or replace professional clinical judgment.",
+      "responsibleAccept": "I understand BALANX does not make diagnoses, adjust medication, or replace professional clinical judgment.",
       "cta": "Continue to create account",
       "footnote": "Next you will create a username and password. Email verification is required.",
       "errorIncomplete": "Complete the use profile and accept all declarations."
+    }
+  },
+  "Terms": {
+    "title": "BALANX terms and conditions of use",
+    "modalTitle": "Terms and conditions",
+    "updated": "Last updated: {year}",
+    "intro": "These terms govern access to and use of the BALANX Progressive Web App. By creating an account or checking the acceptance box, you confirm that you have read, understood and accepted this document in full.",
+    "close": "Close",
+    "closeRead": "I have read this document",
+    "backHome": "Back to home",
+    "footer": "Questions about this document: {email}. This text is product information; it does not replace personalized legal advice.",
+    "sections": {
+      "identity": {
+        "title": "1. Service identification",
+        "body": "BALANX is a digital support tool for functional assessment, rhythmic cueing and between-visit follow-up in neurodegeneration contexts.\n\nThe service is offered under the BALANX brand. Product support is available at the email listed at the end of this document."
+      },
+      "nature": {
+        "title": "2. Nature of the product (clinical scope)",
+        "body": "BALANX is a support tool. It is not an emergency telemedicine service, not a diagnostic laboratory, and does not replace in-person assessment or the judgment of a licensed clinician.\n\nIn particular, BALANX:\n• Does not make medical diagnoses.\n• Does not prescribe, adjust or discontinue medication.\n• Does not guarantee absolute fall prevention or specific clinical outcomes.\n• Does not replace emergency care: if warning signs appear, seek medical help immediately."
+      },
+      "modules": {
+        "title": "3. Modules by condition",
+        "body": "Each neurodegenerative disease requires its own evidence and safety work. Today the active clinical module covers Parkinson’s disease in early to moderate stages, according to the flows available in the app.\n\nOther modules (for example Alzheimer’s, multiple system atrophy or other neurodegenerative conditions) may appear as a roadmap or product interest. That is not a clinical offer, therapeutic protocol or treatment promise for those conditions."
+      },
+      "users": {
+        "title": "4. Authorized users",
+        "body": "Health professionals, caregivers or family members, and people with a diagnosis under supervised use may register, provided they are of legal age and accept these terms.\n\nThe user is responsible for the accuracy of the information entered (use profile, clinical data and declarations)."
+      },
+      "duties": {
+        "title": "5. User duties",
+        "body": "The user agrees to:\n• Use BALANX responsibly and in accordance with applicable law.\n• Not present the tool as a substitute for the treating physician or physiotherapist.\n• Protect the confidentiality of patient or family information under their care.\n• Supervise home use when a person with motor or cognitive impairment participates.\n• Stop use if excessive fatigue, instability or any risky situation appears."
+      },
+      "data": {
+        "title": "6. Personal data and privacy",
+        "body": "Personal data processing is governed, in Colombia, by Law 1581 of 2012 and complementary rules, or by the equivalent law of the country from which the service is used.\n\nData are used to create and authenticate the account, operate the application, improve the service and meet legal obligations. You may exercise access, update, rectification and deletion rights under applicable law by contacting support.\n\nAuthentication may rely on shared GALF ecosystem infrastructure; BALANX clinical data schemas remain segregated according to the product’s technical design."
+      },
+      "limits": {
+        "title": "7. Limitation of liability",
+        "body": "To the fullest extent permitted by law, BALANX and the operators of the service are not liable for clinical decisions based solely on the application, nor for harm arising from misuse, technical interruptions, force majeure, or incomplete or inaccurate information entered by the user.\n\nAssessments, metrics and routines are guidance and must be interpreted within professional judgment and the patient’s real clinical context."
+      },
+      "prohibitions": {
+        "title": "8. Prohibited uses",
+        "body": "It is prohibited to:\n• Use BALANX to diagnose, titrate medication or manage emergencies.\n• Attempt to access other people’s accounts or data.\n• Reuse clinical content for misleading or unauthorized advertising purposes.\n• Introduce malware, breach security or abusively overload the infrastructure."
+      },
+      "changes": {
+        "title": "9. Changes to these terms",
+        "body": "We may update these terms to reflect product improvements, legal requirements or changes in module scope. The current version is published in the application. Continued use after publication implies acceptance of the updated version, unless the law requires additional consent."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "body": "For questions about these terms, privacy or the clinical scope of the product, write to the BALANX support email listed at the bottom of this document."
+      }
     }
   },
   "AuthPages": {
@@ -173,7 +228,9 @@
       "roleCaregiver": "Caregiver",
       "passwordLabel": "Password",
       "confirmLabel": "Confirm password",
-      "terms": "I accept the terms of use and personal data processing.",
+      "terms": "I have read and accept the terms of use and personal data processing.",
+      "termsReadLink": "Read here",
+      "termsPageLink": "Full page",
       "adult": "I confirm that I am of legal age.",
       "responsible": "I declare responsible use: BALANX does not replace clinical judgment or emergency care.",
       "submit": "Register",
