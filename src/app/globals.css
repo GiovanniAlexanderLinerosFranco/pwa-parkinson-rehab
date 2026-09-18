@@ -1,8 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* BALANX — Deep Medical / Neuro-Tech */
+  --balanx-bg: #0b132b;
+  --balanx-surface: rgba(15, 23, 42, 0.72);
+  --balanx-ink: #f1f5f9;
+  --balanx-muted: #94a3b8;
+  --balanx-border: rgba(34, 211, 238, 0.18);
+  --balanx-dopamine: #f59e0b;
+  --balanx-serotonin: #22d3ee;
+  --balanx-acetylcholine: #34d399;
+  --balanx-card: rgba(15, 23, 42, 0.65);
+  --balanx-light-idle: rgba(34, 211, 238, 0.25);
+  --balanx-light-on: #fbbf24;
+
+  /* Alias legado (componentes que aún usan --cadencia-*) */
+  --cadencia-bg: var(--balanx-bg);
+  --cadencia-surface: var(--balanx-surface);
+  --cadencia-ink: var(--balanx-ink);
+  --cadencia-muted: var(--balanx-muted);
+  --cadencia-primary: #0891b2;
+  --cadencia-primary-dark: #0e7490;
+  --cadencia-accent: var(--balanx-serotonin);
+  --cadencia-warn: var(--balanx-dopamine);
+  --cadencia-ok: var(--balanx-acetylcholine);
+  --cadencia-border: var(--balanx-border);
+  --cadencia-light-idle: var(--balanx-light-idle);
+  --cadencia-light-on: var(--balanx-light-on);
+
+  --background: var(--balanx-bg);
+  --foreground: var(--balanx-ink);
 }
 
 @theme inline {
@@ -12,15 +39,43 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.balanx-glass {
+  background: var(--balanx-card);
+  border: 1px solid var(--balanx-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.balanx-glow-cyan {
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.16);
+}
+
+.balanx-glow-emerald {
+  box-shadow: 0 0 24px rgba(52, 211, 153, 0.16);
+}
+
+.balanx-glow-amber {
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.18);
+}
+
+.balanx-btn-primary {
+  background: linear-gradient(135deg, #0891b2, #06b6d4);
+  color: #0b132b;
+  font-weight: 800;
+}
+
+.balanx-btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.balanx-btn-dopamine {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: #0b132b;
+  font-weight: 800;
 }

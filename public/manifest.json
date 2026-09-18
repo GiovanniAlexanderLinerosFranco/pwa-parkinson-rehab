@@ -1,13 +1,19 @@
 {
-  "name": "Plataforma de Asistencia Clínica - Parkinson",
-  "short_name": "pwa-parkinson-rehab",
-  "description": "Plataforma de asistencia clínica para valoración e intervención fisioterapéutica en enfermedad de Parkinson.",
-  "start_url": "/",
+  "name": "BALANX",
+  "short_name": "BALANX",
+  "description": "Balance neuroquímico y optimización clínica. Valoración, cueing y cuidado en neurodegeneración.",
+  "start_url": "/es",
   "display": "standalone",
-  "background_color": "#fef2f2",
-  "theme_color": "#991b1b",
+  "background_color": "#0B132B",
+  "theme_color": "#0B132B",
   "lang": "es",
   "icons": [
+    {
+      "src": "/icon-balanx.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
     {
       "src": "/icon.svg",
       "sizes": "any",

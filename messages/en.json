@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "fundamentals": "Clinical guide",
+    "examples": "Session examples",
+    "lang": "Language",
+    "login": "Sign in",
+    "logout": "Sign out"
+  },
+  "header": {
+    "title": "BALANX",
+    "subtitle": "Balance neuroquímico, valoración y cueing en Parkinson temprano"
+  },
+  "profile": {
+    "title": "Patient profile",
+    "name": "Full name",
+    "stage": "Hoehn and Yahr stage (I–III)",
+    "mmse": "MMSE score",
+    "professional": "Responsible clinician",
+    "env": "Socio-environmental assessment (support network / home barriers)",
+    "requirement": "Guidance: stages I–III and MMSE ≥ 24."
+  },
+  "battery": {
+    "title": "Clinical assessment battery"
+  },
+  "cueing": {
+    "title": "Rhythmic stimulation (cueing)",
+    "help": "Sync gait with an external rhythm. Use audio, lights, or both based on patient needs.",
+    "bpm": "Ritmo (BPM)",
+    "volume": "Beep volume",
+    "modeLabel": "Sensory mode",
+    "modes": {
+      "both": "Audio + lights",
+      "audio": "Audio only",
+      "light": "Lights only"
+    },
+    "start": "Start stimulation",
+    "stop": "Stop",
+    "lightHint": "Light synced to each beep"
+  },
+  "session": {
+    "title": "Session monitoring"
+  },
+  "save": {
+    "title": "Follow-up and save",
+    "button": "Save assessment",
+    "saving": "Saving…",
+    "integrity": "Clinical integrity: complete at least 2 battery tests to enable saving"
+  },
+  "footer": {
+    "disclaimer": "BALANX is a clinical decision assistant and does not replace professional judgment. Professional use only.",
+    "rights": "All rights reserved."
+  },
+  "shield": {
+    "title": "Professional access",
+    "body1": "Restricted use. Clinical decision-support tool for licensed physiotherapists and health professionals.",
+    "body2": "By continuing you accept responsibility for patient safety and data confidentiality under applicable privacy law.",
+    "accept": "I am a licensed professional and accept the terms"
+  },
+  "tug": {
+    "start": "Start",
+    "stop": "Stop",
+    "reset": "Reset"
+  },
+  "clinicalInfo": {
+    "title": "Clinical foundation and use",
+    "s1t": "1. Clinical foundation",
+    "s1": "Rhythmic auditory and visual cues support sensorimotor coupling and help activate compensatory pathways, making it easier to start and keep walking in Parkinson’s disease.",
+    "s2t": "2. Session protocol",
+    "s2": "Keep intervention sessions within about 30 minutes total to reduce neural fatigue and protect motor performance according to clinical tolerance.",
+    "s3t": "3. Dual-task guidance",
+    "s3": "Add concurrent cognitive tasks (countdown, naming, verbal fluency) to train attentional control during gait.",
+    "close": "Close"
+  },
+  "role": {
+    "label": "Usage mode",
+    "professional": "Professional",
+    "home": "Home (patient / caregiver)"
+  },
+  "Landing": {
+    "hero": {
+      "title": "Balance neuroquímico para Parkinson temprano",
+      "subtitle": "Decision-support for assessment, rhythmic cueing and fall prevention. Built for clinicians and families supporting care at home.",
+      "ctaStart": "Get started",
+      "ctaLogin": "I already have an account"
+    },
+    "pillars": {
+      "clinicalTitle": "Clinical use",
+      "clinicalBody": "Assessment battery and multimodal cueing for physiotherapy sessions.",
+      "homeTitle": "Home use",
+      "homeBody": "Guided routines for caregivers and people with early–moderate Parkinson’s.",
+      "safeTitle": "Responsible use",
+      "safeBody": "Does not diagnose or replace a clinician. Requires an account, terms and a use declaration."
+    },
+    "form": {
+      "title": "Tell us how you will use it",
+      "subtitle": "We use this to set up your BALANX account with the right safeguards.",
+      "viaLabel": "Who are you?",
+      "viaPro": "I am a health professional",
+      "viaHome": "I support a family member",
+      "roleLabel": "Specific role",
+      "roleFt": "Physiotherapist",
+      "roleOther": "Other health professional",
+      "roleCaregiver": "Caregiver / family",
+      "roleSelf": "Person with a diagnosis (supervised use)",
+      "useLabel": "Primary intended use",
+      "useAssessment": "Clinical assessment",
+      "useCueing": "In-session cueing",
+      "useHome": "Home training",
+      "useFollowup": "Between-visit follow-up",
+      "useTraining": "Learning / exploration",
+      "conditionLabel": "Condition of interest",
+      "condParkinson": "Parkinson’s",
+      "condOther": "Other neurodegenerative (coming soon)",
+      "condPrivate": "Prefer not to say",
+      "conditionHint": "The product is focused on Parkinson’s today. Other modules will open with their own evidence base.",
+      "contextLabel": "Use context",
+      "ctxClinic": "Clinic",
+      "ctxHome": "Home",
+      "ctxBoth": "Both",
+      "termsTitle": "Terms and responsibility (required)",
+      "termsAccept": "I accept the terms of use and personal data processing under applicable privacy law.",
+      "adultAccept": "I confirm that I am of legal age.",
+      "responsibleAccept": "I understand BALANX does not diagnose, adjust medication, or replace professional clinical judgment.",
+      "cta": "Continue to create account",
+      "footnote": "Next you will create a username and password. Email verification is required.",
+      "errorIncomplete": "Complete the use profile and accept all declarations."
+    }
+  },
+  "AuthPages": {
+    "password": {
+      "show": "Show password",
+      "hide": "Hide password",
+      "ruleLength": "At least 8 characters",
+      "ruleUpper": "At least one uppercase letter",
+      "ruleNumber": "At least one number",
+      "ruleSymbol": "At least one symbol"
+    },
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Access your BALANX account",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Sign in",
+      "forgot": "Forgot your password?",
+      "noAccount": "No account yet?",
+      "createAccount": "Create account",
+      "errorCredentials": "Incorrect email or password.",
+      "errorGeneric": "Unable to sign in.",
+      "errorLink": "The verification link is invalid or expired."
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "Register for clinical or home use",
+      "nameLabel": "Full name",
+      "emailLabel": "Email",
+      "roleLabel": "Role",
+      "roleFt": "Physiotherapist",
+      "rolePatient": "Patient",
+      "roleCaregiver": "Caregiver",
+      "passwordLabel": "Password",
+      "confirmLabel": "Confirm password",
+      "terms": "I accept the terms of use and personal data processing.",
+      "adult": "I confirm that I am of legal age.",
+      "responsible": "I declare responsible use: BALANX does not replace clinical judgment or emergency care.",
+      "submit": "Register",
+      "hasAccount": "Already have an account?",
+      "goLogin": "Go to sign in",
+      "needLanding": "First tell us how you will use BALANX.",
+      "goLanding": "Go to home",
+      "success": "Check your email ({email}) and confirm the account to continue.",
+      "errorPasswordMismatch": "Passwords do not match.",
+      "errorPasswordLength": "Password is too short.",
+      "errorPasswordUppercase": "Password needs an uppercase letter.",
+      "errorPasswordNumber": "Password needs a number.",
+      "errorPasswordSymbol": "Password needs a symbol.",
+      "errorEmailTaken": "That email is already registered.",
+      "errorTerms": "You must accept the terms.",
+      "errorAge": "You must confirm legal age.",
+      "errorResponsible": "You must declare responsible use.",
+      "errorIntent": "Complete the use form on the landing page.",
+      "errorNameShort": "Name is too short.",
+      "errorGeneric": "Unable to complete registration."
+    },
+    "verify": {
+      "title": "Verify your email",
+      "subtitle": "We sent a confirmation link",
+      "body": "Open the email and tap the link to activate your account.",
+      "bodyWithEmail": "We sent a link to {email}. Open it to activate your account.",
+      "goLogin": "Back to sign in"
+    },
+    "recovery": {
+      "title": "Reset password",
+      "subtitle": "We will send a secure link",
+      "emailLabel": "Email",
+      "submit": "Send link",
+      "success": "If the email exists, you will receive instructions shortly.",
+      "goLogin": "Back to sign in",
+      "errorGeneric": "Unable to send the link."
+    },
+    "updatePassword": {
+      "title": "New password",
+      "subtitle": "Choose a strong password",
+      "passwordLabel": "New password",
+      "confirmLabel": "Confirm password",
+      "submit": "Save",
+      "errorMismatch": "Passwords do not match.",
+      "errorWeak": "Password does not meet the requirements.",
+      "errorGeneric": "Unable to update the password."
+    }
+  }
+}

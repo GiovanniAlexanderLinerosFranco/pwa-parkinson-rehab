@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sustentación / tesis (histórico; no forma parte del producto BALANX)
+Sustentacion_*.pptx
+Guion_oral_sustentacion*.pdf
+assets_sustentacion/
+build_algoritmo_slide.py
+build_guion_oral.py
+build_slides_v4.py
+build_slides_visuales.py
+build_sustentacion_v2.py
+__pycache__/

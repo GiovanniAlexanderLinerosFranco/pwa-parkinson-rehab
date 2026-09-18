@@ -1,26 +1,41 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 export default function ClinicalInfoModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const t = useTranslations('clinicalInfo');
   if (!open) return null;
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" onClick={onClose}>
-      <div className="w-full max-w-2xl overflow-hidden rounded-lg bg-white shadow-xl" onClick={(e) => e.stopPropagation()}>
-        <header className="bg-red-800 text-white px-4 py-3 flex items-center justify-between">
-          <h2 className="text-base font-semibold">Fundamentación y Uso Clínico</h2>
-          <button onClick={onClose} className="text-white hover:bg-red-900 p-1 rounded">✕</button>
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={t('title')}
+    >
+      <div
+        className="balanx-glass balanx-glow-cyan w-full max-w-2xl overflow-hidden rounded-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <header className="flex items-center justify-between border-b border-cyan-500/20 bg-slate-950/80 px-4 py-3 text-cyan-100">
+          <h2 className="text-base font-semibold">{t('title')}</h2>
+          <button onClick={onClose} className="rounded p-1 hover:bg-cyan-500/20" aria-label={t('close')}>
+            ✕
+          </button>
         </header>
-        <div className="p-4 space-y-4 text-sm text-gray-800">
+        <div className="space-y-4 p-4 text-sm text-slate-300">
           <section>
-            <h3 className="font-semibold mb-1">1. Fundamento Clínico</h3>
-            <p>Los estímulos auditivos rítmicos favorecen el acoplamiento sensoriomotor y ayudan a activar rutas compensatorias (Bypass Neuronal), facilitando el inicio y la continuidad de la marcha en pacientes con EP.</p>
+            <h3 className="mb-1 font-semibold text-cyan-200">{t('s1t')}</h3>
+            <p>{t('s1')}</p>
           </section>
           <section>
-            <h3 className="font-semibold mb-1">2. Protocolo de Uso</h3>
-            <p>Se recomienda que las sesiones de intervención no excedan los 30 minutos totales para evitar la fatiga neuronal, optimizando el rendimiento motor según tolerancia clínica.</p>
+            <h3 className="mb-1 font-semibold text-cyan-200">{t('s2t')}</h3>
+            <p>{t('s2')}</p>
           </section>
           <section>
-            <h3 className="font-semibold mb-1">3. Instrucciones de Doble Tarea</h3>
-            <p>Incorporar tareas simultáneas de alta complejidad (conteo regresivo, denominación semántica, fluidez verbal) para entrenar el control atencional y el desempeño funcional durante la deambulación.</p>
+            <h3 className="mb-1 font-semibold text-emerald-300">{t('s3t')}</h3>
+            <p>{t('s3')}</p>
           </section>
         </div>
       </div>

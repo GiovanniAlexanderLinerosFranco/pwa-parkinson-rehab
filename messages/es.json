@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "fundamentals": "Guía clínica",
+    "examples": "Ejemplos de sesión",
+    "lang": "Idioma",
+    "login": "Entrar",
+    "logout": "Salir"
+  },
+  "header": {
+    "title": "BALANX",
+    "subtitle": "Balance neuroquímico, valoración y cueing en Parkinson temprano"
+  },
+  "profile": {
+    "title": "Perfil del paciente",
+    "name": "Nombre completo",
+    "stage": "Estadio Hoehn y Yahr (I-III)",
+    "mmse": "Puntaje MMSE",
+    "professional": "Profesional responsable",
+    "env": "Evaluación socio-ambiental (red de apoyo / barreras en el hogar)",
+    "requirement": "Requisito orientativo: estadios I–III y MMSE ≥ 24."
+  },
+  "battery": {
+    "title": "Batería de evaluación clínica"
+  },
+  "cueing": {
+    "title": "Estimulación rítmica (cueing)",
+    "help": "Sincroniza la marcha con un ritmo externo. Use audio, luces o ambos según la necesidad del paciente.",
+    "bpm": "Ritmo (BPM)",
+    "volume": "Volumen del bip",
+    "modeLabel": "Modo sensorial",
+    "modes": {
+      "both": "Audio + luces",
+      "audio": "Solo audio",
+      "light": "Solo luces"
+    },
+    "start": "Iniciar estimulación",
+    "stop": "Detener",
+    "lightHint": "Luz sincronizada con cada bip"
+  },
+  "session": {
+    "title": "Monitoreo de sesión"
+  },
+  "save": {
+    "title": "Seguimiento y guardado",
+    "button": "Guardar valoración",
+    "saving": "Guardando…",
+    "integrity": "Integridad clínica: complete al menos 2 pruebas para habilitar el guardado"
+  },
+  "footer": {
+    "disclaimer": "BALANX es un asistente de decisión clínica y no sustituye el criterio del fisioterapeuta. Uso profesional.",
+    "rights": "Todos los derechos reservados."
+  },
+  "shield": {
+    "title": "Acceso profesional",
+    "body1": "Uso restringido. Herramienta de soporte clínico para fisioterapeutas y profesionales de la salud acreditados.",
+    "body2": "Al continuar declara responsabilidad sobre la integridad del paciente y la confidencialidad de los datos (Ley 1581 de 2012 en Colombia u equivalente local).",
+    "accept": "Declaro ser profesional y acepto los términos"
+  },
+  "tug": {
+    "start": "Iniciar",
+    "stop": "Detener",
+    "reset": "Reiniciar"
+  },
+  "clinicalInfo": {
+    "title": "Fundamentación y uso clínico",
+    "s1t": "1. Fundamento clínico",
+    "s1": "Los estímulos auditivos y visuales rítmicos favorecen el acoplamiento sensoriomotor y ayudan a activar rutas compensatorias, facilitando el inicio y la continuidad de la marcha en enfermedad de Parkinson.",
+    "s2t": "2. Protocolo de sesión",
+    "s2": "Se recomienda que las sesiones de intervención no excedan unos 30 minutos totales para reducir la fatiga neuronal y proteger el rendimiento motor según tolerancia clínica.",
+    "s3t": "3. Guía de doble tarea",
+    "s3": "Incorpore tareas cognitivas simultáneas (conteo regresivo, denominación, fluidez verbal) para entrenar el control atencional durante la marcha.",
+    "close": "Cerrar"
+  },
+  "role": {
+    "label": "Modo de uso",
+    "professional": "Profesional",
+    "home": "Hogar (paciente / cuidador)"
+  },
+  "Landing": {
+    "hero": {
+      "title": "Balance neuroquímico para Parkinson temprano",
+      "subtitle": "Herramienta de apoyo para valoración, cueing rítmico y prevención de caídas. Pensada para profesionales y para familias que acompañan en casa.",
+      "ctaStart": "Quiero empezar",
+      "ctaLogin": "Ya tengo cuenta"
+    },
+    "pillars": {
+      "clinicalTitle": "Uso clínico",
+      "clinicalBody": "Batería de evaluación y cueing multimodal para sesiones con fisioterapeuta.",
+      "homeTitle": "Uso en el hogar",
+      "homeBody": "Rutinas guiadas para cuidadores y personas con Parkinson temprano–moderado.",
+      "safeTitle": "Uso responsable",
+      "safeBody": "No diagnostica ni sustituye al médico. Requiere cuenta, términos y declaración de uso."
+    },
+    "form": {
+      "title": "Cuéntanos para qué la usarás",
+      "subtitle": "Con esto configuramos tu cuenta BALANX y aplicamos las restricciones adecuadas.",
+      "viaLabel": "¿Quién eres?",
+      "viaPro": "Soy profesional de la salud",
+      "viaHome": "Acompaño a un familiar",
+      "roleLabel": "Rol concreto",
+      "roleFt": "Fisioterapeuta",
+      "roleOther": "Otro profesional de la salud",
+      "roleCaregiver": "Cuidador / familiar",
+      "roleSelf": "Persona con diagnóstico (uso supervisado)",
+      "useLabel": "Uso principal previsto",
+      "useAssessment": "Valoración clínica",
+      "useCueing": "Cueing en sesión",
+      "useHome": "Entrenamiento en casa",
+      "useFollowup": "Seguimiento entre citas",
+      "useTraining": "Formación / exploración",
+      "conditionLabel": "Condición de interés",
+      "condParkinson": "Parkinson",
+      "condOther": "Otra neurodegenerativa (próximamente)",
+      "condPrivate": "Prefiero no decir",
+      "conditionHint": "Hoy el producto está enfocado en Parkinson. Otros módulos se abrirán con evidencia propia.",
+      "contextLabel": "Contexto de uso",
+      "ctxClinic": "Consultorio",
+      "ctxHome": "Domicilio",
+      "ctxBoth": "Ambos",
+      "termsTitle": "Términos y responsabilidad (obligatorio)",
+      "termsAccept": "Acepto los términos de uso y el tratamiento de datos personales (Ley 1581 de 2012 en Colombia u equivalente).",
+      "adultAccept": "Confirmo que soy mayor de edad.",
+      "responsibleAccept": "Entiendo que BALANX no diagnostica, no ajusta fármacos y no sustituye el criterio clínico profesional.",
+      "cta": "Continuar a crear cuenta",
+      "footnote": "Después crearás usuario y contraseña. Necesitarás verificar tu correo.",
+      "errorIncomplete": "Completa el perfil de uso y acepta todas las declaraciones."
+    }
+  },
+  "AuthPages": {
+    "password": {
+      "show": "Mostrar contraseña",
+      "hide": "Ocultar contraseña",
+      "ruleLength": "Mínimo 8 caracteres",
+      "ruleUpper": "Al menos una mayúscula",
+      "ruleNumber": "Al menos un número",
+      "ruleSymbol": "Al menos un símbolo"
+    },
+    "login": {
+      "title": "Iniciar sesión",
+      "subtitle": "Accede a tu cuenta BALANX",
+      "emailLabel": "Correo",
+      "passwordLabel": "Contraseña",
+      "submit": "Entrar",
+      "forgot": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes cuenta?",
+      "createAccount": "Crear cuenta",
+      "errorCredentials": "Correo o contraseña incorrectos.",
+      "errorGeneric": "No fue posible iniciar sesión.",
+      "errorLink": "El enlace de verificación no es válido o expiró."
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "subtitle": "Registro para uso profesional o domiciliario",
+      "nameLabel": "Nombre completo",
+      "emailLabel": "Correo",
+      "roleLabel": "Rol",
+      "roleFt": "Fisioterapeuta",
+      "rolePatient": "Paciente",
+      "roleCaregiver": "Cuidador",
+      "passwordLabel": "Contraseña",
+      "confirmLabel": "Confirmar contraseña",
+      "terms": "Acepto los términos de uso y el tratamiento de datos personales.",
+      "adult": "Confirmo que soy mayor de edad.",
+      "responsible": "Declaro uso responsable: BALANX no sustituye criterio clínico ni atención de urgencias.",
+      "submit": "Registrarme",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "goLogin": "Ir a iniciar sesión",
+      "needLanding": "Primero indica para qué usarás BALANX.",
+      "goLanding": "Ir al inicio",
+      "success": "Revisa tu correo ({email}) y confirma la cuenta para continuar.",
+      "errorPasswordMismatch": "Las contraseñas no coinciden.",
+      "errorPasswordLength": "La contraseña es demasiado corta.",
+      "errorPasswordUppercase": "Falta una mayúscula en la contraseña.",
+      "errorPasswordNumber": "Falta un número en la contraseña.",
+      "errorPasswordSymbol": "Falta un símbolo en la contraseña.",
+      "errorEmailTaken": "Ese correo ya está registrado.",
+      "errorTerms": "Debes aceptar los términos.",
+      "errorAge": "Debes confirmar mayoría de edad.",
+      "errorResponsible": "Debes declarar uso responsable.",
+      "errorIntent": "Completa el formulario de uso en la página de inicio.",
+      "errorNameShort": "El nombre es demasiado corto.",
+      "errorGeneric": "No fue posible completar el registro."
+    },
+    "verify": {
+      "title": "Verifica tu correo",
+      "subtitle": "Te enviamos un enlace de confirmación",
+      "body": "Abre el correo y pulsa el enlace para activar tu cuenta.",
+      "bodyWithEmail": "Enviamos un enlace a {email}. Ábrelo para activar tu cuenta.",
+      "goLogin": "Volver a iniciar sesión"
+    },
+    "recovery": {
+      "title": "Recuperar contraseña",
+      "subtitle": "Te enviaremos un enlace seguro",
+      "emailLabel": "Correo",
+      "submit": "Enviar enlace",
+      "success": "Si el correo existe, recibirás instrucciones en unos minutos.",
+      "goLogin": "Volver a iniciar sesión",
+      "errorGeneric": "No fue posible enviar el enlace."
+    },
+    "updatePassword": {
+      "title": "Nueva contraseña",
+      "subtitle": "Define una contraseña segura",
+      "passwordLabel": "Nueva contraseña",
+      "confirmLabel": "Confirmar contraseña",
+      "submit": "Guardar",
+      "errorMismatch": "Las contraseñas no coinciden.",
+      "errorWeak": "La contraseña no cumple los requisitos.",
+      "errorGeneric": "No fue posible actualizar la contraseña."
+    }
+  }
+}
