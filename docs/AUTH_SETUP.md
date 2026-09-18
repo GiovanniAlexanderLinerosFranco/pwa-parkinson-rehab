@@ -14,7 +14,7 @@ En `.env.local` y Vercel (Production / Preview / Development):
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - `SUPABASE_URL` (igual al hub)
 - `SUPABASE_SERVICE_ROLE_KEY`
-- `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL` (prod: `https://balanx.vercel.app`)
+- `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL` (prod: `https://balanx-app.vercel.app`)
 
 Tras cambiar `NEXT_PUBLIC_*`: **Redeploy**.
 
@@ -25,9 +25,9 @@ Dashboard → Authentication → URL Configuration.
 **Añadir** (no borrar TrainAIfit / Cudoku ni otros productos del hub):
 
 ```
-https://balanx.vercel.app/**
-https://balanx.vercel.app/*/auth/callback
-https://balanx.vercel.app/*/auth/recovery-confirm
+https://balanx-app.vercel.app/**
+https://balanx-app.vercel.app/*/auth/callback
+https://balanx-app.vercel.app/*/auth/recovery-confirm
 http://localhost:3000/**
 http://localhost:3000/*/auth/callback
 http://localhost:3000/*/auth/recovery-confirm
